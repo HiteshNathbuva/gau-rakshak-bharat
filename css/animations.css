@@ -1,0 +1,340 @@
+/**
+ * GauRakshak Bharat — Animations
+ * --------------------------------
+ * Reusable keyframe animations and animation utility classes.
+ * Use with [data-animate] attributes — wired in animations.js.
+ */
+
+/* ============================================
+   KEYFRAME DEFINITIONS
+   ============================================ */
+
+/* Fade Up */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Fade Down */
+@keyframes fadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Fade Left */
+@keyframes fadeLeft {
+  from {
+    opacity: 0;
+    transform: translateX(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Fade Right */
+@keyframes fadeRight {
+  from {
+    opacity: 0;
+    transform: translateX(-24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Scale */
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.85);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Rotate */
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Floating */
+@keyframes floating {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Pulse */
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.85;
+    transform: scale(1.04);
+  }
+}
+
+/* Glow */
+@keyframes glow {
+  0%,
+  100% {
+    box-shadow: 0 0 5px rgb(74 154 56 / 0.3);
+  }
+  50% {
+    box-shadow: 0 0 20px rgb(74 154 56 / 0.6), 0 0 40px rgb(74 154 56 / 0.2);
+  }
+}
+
+/* Gradient Animation */
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Shimmer */
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+/* Ripple */
+@keyframes ripple {
+  0% {
+    transform: scale(0);
+    opacity: 0.6;
+  }
+  100% {
+    transform: scale(2.5);
+    opacity: 0;
+  }
+}
+
+/* Hero Animation — subtle entrance for future hero blocks */
+@keyframes heroReveal {
+  from {
+    opacity: 0;
+    transform: translateY(40px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* ============================================
+   ANIMATION UTILITY CLASSES
+   Apply directly or via data-animate attribute
+   ============================================ */
+
+.animate-fade-up {
+  animation: fadeUp var(--transition-slower) ease forwards;
+}
+
+.animate-fade-down {
+  animation: fadeDown var(--transition-slower) ease forwards;
+}
+
+.animate-fade-left {
+  animation: fadeLeft var(--transition-slower) ease forwards;
+}
+
+.animate-fade-right {
+  animation: fadeRight var(--transition-slower) ease forwards;
+}
+
+.animate-scale {
+  animation: scaleIn var(--transition-slower) ease forwards;
+}
+
+.animate-rotate {
+  animation: rotate 2s linear infinite;
+}
+
+.animate-floating {
+  animation: floating 3s ease-in-out infinite;
+}
+
+.animate-pulse {
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.animate-glow {
+  animation: glow 2s ease-in-out infinite;
+}
+
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradientShift 4s ease infinite;
+}
+
+.animate-shimmer {
+  background: linear-gradient(
+    90deg,
+    var(--color-bg-muted) 25%,
+    var(--color-neutral-200) 50%,
+    var(--color-bg-muted) 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s ease-in-out infinite;
+}
+
+.animate-hero {
+  animation: heroReveal 0.8s ease forwards;
+}
+
+/* ============================================
+   SCROLL-TRIGGERED STATE
+   Elements start hidden; JS adds .is-visible
+   ============================================ */
+[data-animate] {
+  opacity: 0;
+}
+
+[data-animate].is-visible {
+  opacity: 1;
+}
+
+[data-animate="fade-up"].is-visible {
+  animation: fadeUp var(--transition-slower) ease forwards;
+}
+
+[data-animate="fade-down"].is-visible {
+  animation: fadeDown var(--transition-slower) ease forwards;
+}
+
+[data-animate="fade-left"].is-visible {
+  animation: fadeLeft var(--transition-slower) ease forwards;
+}
+
+[data-animate="fade-right"].is-visible {
+  animation: fadeRight var(--transition-slower) ease forwards;
+}
+
+[data-animate="scale"].is-visible {
+  animation: scaleIn var(--transition-slower) ease forwards;
+}
+
+/* Stagger delay helpers */
+[data-animate-delay="1"] { animation-delay: 0.1s; }
+[data-animate-delay="2"] { animation-delay: 0.2s; }
+[data-animate-delay="3"] { animation-delay: 0.3s; }
+[data-animate-delay="4"] { animation-delay: 0.4s; }
+[data-animate-delay="5"] { animation-delay: 0.5s; }
+
+/* ============================================
+   HOVER INTERACTIONS
+   ============================================ */
+
+/* Hover Lift */
+.hover-lift {
+  transition:
+    transform var(--transition-base),
+    box-shadow var(--transition-base);
+}
+
+.hover-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Card Hover */
+.card-hover {
+  transition:
+    transform var(--transition-base),
+    box-shadow var(--transition-base),
+    border-color var(--transition-base);
+}
+
+.card-hover:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-xl);
+  border-color: var(--color-primary-300);
+}
+
+/* Button Hover — enhanced lift and glow */
+.btn-hover {
+  position: relative;
+  overflow: hidden;
+  transition:
+    transform var(--transition-base),
+    box-shadow var(--transition-base);
+}
+
+.btn-hover:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-glow-primary);
+}
+
+.btn-hover:active {
+  transform: translateY(0);
+}
+
+/* Ripple effect container */
+.ripple-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.ripple-container .ripple-effect {
+  position: absolute;
+  border-radius: var(--radius-full);
+  background-color: rgb(255 255 255 / 0.4);
+  pointer-events: none;
+  animation: ripple 0.6s ease-out forwards;
+}
+
+/* Reduced motion — respect user preferences */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  [data-animate] {
+    opacity: 1;
+  }
+}
