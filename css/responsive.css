@@ -259,12 +259,17 @@ table {
    ============================================ */
 @media (max-width: 1279px) {
   .navbar__inner {
-    min-height: 112px;
-    gap: var(--space-4);
+    min-height: 72px;
+    gap: var(--space-5);
+    padding: var(--space-2) var(--space-4);
   }
 
   .navbar__logo {
-    width: 150px;
+    height: 48px;
+  }
+
+  .navbar.is-scrolled .navbar__logo {
+    height: 42px;
   }
 
   .navbar__nav {
@@ -272,7 +277,7 @@ table {
   }
 
   .navbar__link {
-    font-size: var(--font-size-xs);
+    font-size: 0.875rem;
   }
 
   .nav-action {
@@ -282,7 +287,7 @@ table {
 
 @media (max-width: 1023px) {
   .navbar {
-    padding: var(--space-3) 0;
+    padding-block: var(--space-2);
   }
 
   .navbar__shell {
@@ -291,10 +296,11 @@ table {
 
   .navbar__inner {
     display: grid;
-    grid-template-columns: 48px minmax(86px, 1fr) auto;
-    min-height: 92px;
+    grid-template-columns: 42px 1fr auto;
+    align-items: center;
+    min-height: 72px;
     gap: var(--space-3);
-    padding: var(--space-4);
+    padding: var(--space-2) var(--space-3);
   }
 
   .navbar__toggle {
@@ -306,7 +312,7 @@ table {
   }
 
   .navbar__logo {
-    width: 132px;
+    height: 44px;
   }
 
   .navbar__nav {
@@ -318,32 +324,35 @@ table {
   }
 
   .nav-action {
-    min-height: 48px;
+    min-height: 42px;
     padding-inline: var(--space-3);
-    font-size: var(--font-size-xs);
+    font-size: 0.8125rem;
   }
 
   .theme-toggle {
-    width: 48px;
-    height: 48px;
+    width: 42px;
+    height: 42px;
   }
 
   .navbar__value-strip {
     display: none;
   }
 
+  /* Mobile panel — smooth slide-in from top */
   .navbar__mobile-panel {
     display: block;
     max-height: 0;
     overflow: hidden;
-    border-top: 1px solid rgb(255 255 255 / 0.08);
     opacity: 0;
     transform: translateY(-8px);
-    transition: max-height var(--transition-slow), opacity var(--transition-base), transform var(--transition-base);
+    transition:
+      max-height 320ms var(--nav-ease),
+      opacity 220ms var(--nav-ease),
+      transform 260ms var(--nav-ease);
   }
 
   .navbar__mobile-panel.is-open {
-    max-height: 430px;
+    max-height: 640px;
     opacity: 1;
     transform: translateY(0);
   }
@@ -351,93 +360,114 @@ table {
   .mobile-menu {
     position: relative;
     display: grid;
-    grid-template-columns: 1fr 1.1fr;
-    gap: var(--space-6);
-    margin: 0 var(--space-3) var(--space-3);
-    padding: var(--space-5) var(--space-16) var(--space-5) var(--space-5);
+    grid-template-columns: 1fr 1.05fr;
+    gap: var(--space-5);
+    margin: var(--space-2) var(--space-2) var(--space-2);
+    padding: var(--space-5) var(--space-12) var(--space-5) var(--space-5);
+    border-top: 1px solid var(--nav-divider);
     border-radius: var(--radius-lg);
-    background:
-      linear-gradient(135deg, rgb(255 255 255 / 0.06), rgb(255 255 255 / 0.025)),
-      rgb(8 18 31 / 0.88);
-    box-shadow: inset 0 1px 0 rgb(255 255 255 / 0.08);
+    background: transparent;
   }
 
   .mobile-menu__primary {
     display: grid;
-    gap: var(--space-2);
-    padding-right: var(--space-5);
-    border-right: 1px solid rgb(255 255 255 / 0.17);
+    gap: var(--space-1);
+    padding-right: var(--space-4);
+    border-right: 1px solid var(--nav-divider);
   }
 
   .mobile-menu__more {
     display: grid;
     align-content: start;
-    gap: var(--space-3);
+    gap: var(--space-2);
   }
 
   .mobile-menu__heading {
-    color: var(--color-primary-400);
-    font-size: var(--font-size-lg);
-    font-weight: var(--font-weight-medium);
+    color: var(--nav-text-muted);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-bottom: var(--space-1);
   }
 
   .mobile-menu__link {
     display: inline-flex;
     align-items: center;
     gap: var(--space-3);
-    min-height: 40px;
-    color: var(--color-neutral-0);
-    font-size: var(--font-size-lg);
+    min-height: 44px;
+    padding: 0 var(--space-3);
+    border-radius: var(--radius-md);
+    color: var(--nav-text);
+    font-size: 1rem;
+    font-weight: 500;
     line-height: 1.2;
-    transition: color var(--transition-base), transform var(--transition-base);
+    transition: color var(--nav-transition), background-color var(--nav-transition), transform var(--nav-transition);
   }
 
   .mobile-menu__link .icon {
-    width: 24px;
-    height: 24px;
+    width: 20px;
+    height: 20px;
     flex: 0 0 auto;
+    color: var(--nav-text-muted);
+    transition: color var(--nav-transition);
   }
 
   .mobile-menu__link:hover,
   .mobile-menu__link:focus-visible,
   .mobile-menu__link.is-active {
-    color: var(--color-primary-400);
-    transform: translateX(2px);
+    color: var(--nav-accent);
+    background: var(--nav-hover-bg);
+    transform: translateX(3px);
+    outline: none;
+  }
+
+  .mobile-menu__link:hover .icon,
+  .mobile-menu__link:focus-visible .icon,
+  .mobile-menu__link.is-active .icon {
+    color: var(--nav-accent);
+  }
+
+  .mobile-menu__link:focus-visible {
+    box-shadow: var(--nav-focus-ring);
   }
 
   .mobile-menu__close {
     position: absolute;
-    top: var(--space-5);
-    right: var(--space-4);
-    border: 0;
+    top: var(--space-4);
+    right: var(--space-3);
+    width: 36px;
+    height: 36px;
+    border: 1px solid var(--nav-shell-border);
     background: transparent;
   }
 }
 
 @media (max-width: 767px) {
   .navbar__inner {
-    grid-template-columns: 44px minmax(82px, 1fr) auto;
-    min-height: 80px;
+    grid-template-columns: 40px 1fr auto;
+    min-height: 68px;
     gap: var(--space-2);
-    padding: var(--space-3);
+    padding: var(--space-2);
   }
 
   .navbar__logo {
-    width: 116px;
+    height: 40px;
   }
 
   .navbar__actions {
     gap: var(--space-2);
   }
 
-  .navbar__actions .btn {
-    display: inline-flex;
+  .nav-action {
+    min-height: 40px;
+    padding: 0 var(--space-3);
+    font-size: 0;
+    gap: 0;
   }
 
-  .nav-action {
-    min-height: 44px;
-    padding-inline: var(--space-3);
-    font-size: 0;
+  .nav-action--volunteer {
+    padding: 0 var(--space-3);
   }
 
   .nav-action .icon {
@@ -446,76 +476,72 @@ table {
 
   .theme-toggle,
   .navbar__toggle {
-    width: 44px;
-    height: 44px;
+    width: 40px;
+    height: 40px;
   }
 
   .mobile-menu {
     grid-template-columns: 1fr 1fr;
     gap: var(--space-4);
-    padding: var(--space-4) var(--space-12) var(--space-4) var(--space-4);
+    padding: var(--space-4) var(--space-10) var(--space-4) var(--space-4);
   }
 
   .mobile-menu__link {
-    font-size: var(--font-size-base);
-  }
-
-  .mobile-menu__link .icon {
-    width: 22px;
-    height: 22px;
+    font-size: 0.9375rem;
   }
 }
 
 @media (max-width: 560px) {
   .navbar__inner {
-    grid-template-columns: 40px minmax(76px, 1fr) auto;
+    grid-template-columns: 38px 1fr auto;
   }
 
   .navbar__logo {
-    width: 104px;
+    height: 38px;
   }
 
   .nav-action {
-    width: 42px;
-    min-height: 42px;
+    width: 40px;
+    min-height: 40px;
     padding: 0;
   }
 
   .theme-toggle,
   .navbar__toggle {
-    width: 42px;
-    height: 42px;
+    width: 40px;
+    height: 40px;
   }
 
   .mobile-menu {
     grid-template-columns: 1fr;
-    max-height: min(68vh, 520px);
+    max-height: min(72vh, 560px);
     overflow-y: auto;
+    gap: var(--space-3);
   }
 
   .mobile-menu__primary {
-    padding: 0 0 var(--space-4);
+    padding: 0 0 var(--space-3);
     border-right: 0;
-    border-bottom: 1px solid rgb(255 255 255 / 0.17);
+    border-bottom: 1px solid var(--nav-divider);
   }
 }
 
 @media (max-width: 390px) {
   .navbar__inner {
-    grid-template-columns: 38px 82px auto;
-    padding: var(--space-2);
+    grid-template-columns: 36px 1fr auto;
+    padding: var(--space-1) var(--space-2);
   }
 
   .navbar__logo {
-    width: 88px;
+    height: 36px;
   }
 
   .nav-action,
   .theme-toggle,
   .navbar__toggle {
-    width: 38px;
-    height: 38px;
-    min-height: 38px;
+    width: 36px;
+    height: 36px;
+    min-height: 36px;
   }
 
   .icon {
@@ -525,13 +551,18 @@ table {
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .navbar,
+  .navbar__shell,
   .navbar__mobile-panel,
   .navbar__dropdown,
   .navbar__link,
+  .navbar__link::after,
   .nav-action,
   .theme-toggle,
   .navbar__toggle,
-  .mobile-menu__link {
-    transition-duration: 1ms;
+  .navbar__toggle-bar,
+  .mobile-menu__link,
+  .navbar__logo {
+    transition-duration: 1ms !important;
   }
 }

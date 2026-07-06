@@ -32,6 +32,11 @@
   <!-- Theme Color -->
   <meta name="theme-color" content="#4a9a38">
 
+  <!-- Navbar typography — Manrope (premium sans) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap">
+
   <!-- Stylesheets — load in dependency order -->
   <link rel="stylesheet" href="css/variables.css">
   <link rel="stylesheet" href="css/style.css">
@@ -62,9 +67,11 @@
             aria-label="Open navigation menu"
             aria-expanded="false"
             aria-controls="mobile-nav">
-            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M4 6h16M4 12h16M4 18h16"></path>
-            </svg>
+            <span class="navbar__toggle-icon" aria-hidden="true">
+              <span class="navbar__toggle-bar"></span>
+              <span class="navbar__toggle-bar"></span>
+              <span class="navbar__toggle-bar"></span>
+            </span>
           </button>
 
         <a href="index.html" class="navbar__brand" aria-label="GauRakshak Bharat — Home">
