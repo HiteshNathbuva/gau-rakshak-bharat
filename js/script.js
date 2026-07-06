@@ -32,6 +32,10 @@
     navbar: null,
     navbarToggle: null,
     navbarNav: null,
+    mobilePanel: null,
+    mobileClose: null,
+    dropdownToggle: null,
+    dropdownItem: null,
     backToTop: null,
     animatedElements: null,
     counters: null,
@@ -103,14 +107,20 @@
       DOM.navbar = document.querySelector(".navbar");
       DOM.navbarToggle = document.querySelector(".navbar__toggle");
       DOM.navbarNav = document.querySelector(".navbar__nav");
+      DOM.mobilePanel = document.getElementById("mobile-nav");
+      DOM.mobileClose = document.querySelector(".mobile-menu__close");
+      DOM.dropdownToggle = document.querySelector(".navbar__item--dropdown .navbar__link--button");
+      DOM.dropdownItem = document.querySelector(".navbar__item--dropdown");
 
       Navigation.setActiveLink();
       Navigation.bindMobileToggle();
+      Navigation.bindDropdown();
+      Navigation.bindGlobalClose();
     },
 
     setActiveLink() {
       const currentPath = window.location.pathname.split("/").pop() || "index.html";
-      const navLinks = document.querySelectorAll(".navbar__link");
+      const navLinks = document.querySelectorAll(".navbar__link[href], .mobile-menu__link");
 
       navLinks.forEach((link) => {
         const href = link.getAttribute("href");
@@ -122,20 +132,75 @@
     },
 
     bindMobileToggle() {
-      if (!DOM.navbarToggle || !DOM.navbarNav) return;
+      if (!DOM.navbarToggle || !DOM.mobilePanel) return;
 
       DOM.navbarToggle.addEventListener("click", () => {
-        const isOpen = DOM.navbarNav.classList.toggle("is-open");
-        DOM.navbarToggle.setAttribute("aria-expanded", String(isOpen));
+        const isOpen = DOM.mobilePanel.classList.contains("is-open");
+        if (isOpen) {
+          Navigation.closeMobileMenu();
+        } else {
+          Navigation.openMobileMenu();
+        }
+      });
+
+      if (DOM.mobileClose) {
+        DOM.mobileClose.addEventListener("click", Navigation.closeMobileMenu);
+      }
+
+      DOM.mobilePanel.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", Navigation.closeMobileMenu);
       });
     },
 
+    openMobileMenu() {
+      if (!DOM.mobilePanel || !DOM.navbarToggle) return;
+
+      DOM.mobilePanel.classList.add("is-open");
+      DOM.mobilePanel.setAttribute("aria-hidden", "false");
+      DOM.navbarToggle.setAttribute("aria-expanded", "true");
+    },
+
     closeMobileMenu() {
-      if (!DOM.navbarNav) return;
-      DOM.navbarNav.classList.remove("is-open");
+      if (DOM.mobilePanel) {
+        DOM.mobilePanel.classList.remove("is-open");
+        DOM.mobilePanel.setAttribute("aria-hidden", "true");
+      }
+
       if (DOM.navbarToggle) {
         DOM.navbarToggle.setAttribute("aria-expanded", "false");
       }
+    },
+
+    bindDropdown() {
+      if (!DOM.dropdownToggle || !DOM.dropdownItem) return;
+
+      DOM.dropdownToggle.addEventListener("click", () => {
+        const isOpen = DOM.dropdownItem.classList.toggle("is-open");
+        DOM.dropdownToggle.setAttribute("aria-expanded", String(isOpen));
+      });
+    },
+
+    closeDropdown() {
+      if (!DOM.dropdownItem || !DOM.dropdownToggle) return;
+
+      DOM.dropdownItem.classList.remove("is-open");
+      DOM.dropdownToggle.setAttribute("aria-expanded", "false");
+    },
+
+    bindGlobalClose() {
+      document.addEventListener("click", (event) => {
+        if (DOM.navbar && !DOM.navbar.contains(event.target)) {
+          Navigation.closeMobileMenu();
+          Navigation.closeDropdown();
+        }
+      });
+
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") {
+          Navigation.closeMobileMenu();
+          Navigation.closeDropdown();
+        }
+      });
     },
   };
 
