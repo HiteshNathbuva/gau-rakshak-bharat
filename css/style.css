@@ -770,12 +770,12 @@ h6,
 }
 
 .navbar__brand {
-    flex: 0 0 auto;
+    flex: 0 0 150px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     padding: 0;
-    min-width: 90px;
+    min-width: 150px;
     color: var(--nav-text);
     border-radius: var(--radius-md);
     transition: transform var(--nav-transition);
