@@ -1,78 +1,84 @@
-# GauRakshak Bharat — Project Requirements Document (PRD)
+# GauRakshak Bharat — Product Requirements Document
 
-## Original Problem Statement
-Existing production-ready static website "GauRakshak Bharat". Navbar, footer, design system,
-CSS variables, animations, responsive framework, theme toggle, mobile navigation and back-to-top
-button are FINAL and must not be modified. Only the homepage content between the existing
-navbar and footer needed to be built (13 sections).
+## Project Type
+Static, multi-page website (HTML + CSS + vanilla JS). No backend, no build step.
 
-## Architecture
-- Static HTML / CSS / JS (no build step, no framework)
-- Structure:
-  - `/app/index.html` — homepage (single-page entry)
-  - `/app/pages/*.html` — sub-pages (untouched)
-  - `/app/css/variables.css` — design tokens (protected)
-  - `/app/css/style.css` — core styles + navbar + footer (protected)
-  - `/app/css/animations.css` — keyframes + utility classes (protected)
-  - `/app/css/responsive.css` — breakpoints (protected)
-  - `/app/css/home.css` — NEW, homepage-only styles
-  - `/app/js/{animations,script,ui}.js` — protected
-  - `/app/assets/` — logos, icons (no photos)
+## Original Problem Statement (this iteration)
+Build a premium About page for GauRakshak Bharat and a reusable global footer.
+Do NOT modify the homepage (`index.html`, `home.css`), navbar, folder structure,
+CSS architecture, variables/animations/responsive stylesheets, or asset paths.
+Reuse existing navbar exactly. All About-page styles must live only in
+`css/about.css`. Deliver a Hindi-flavoured, dark green + saffron, dharma-driven
+premium NGO experience across desktop, tablet, and mobile.
+
+## Architecture / File Structure
+```
+/app
+├── index.html                 # Homepage (UNTOUCHED)
+├── css/
+│   ├── variables.css          # Design tokens (UNTOUCHED)
+│   ├── style.css              # Base + navbar (UNTOUCHED)
+│   ├── animations.css         # Keyframes + [data-animate] utilities (UNTOUCHED)
+│   ├── responsive.css         # Global breakpoints (UNTOUCHED)
+│   ├── home.css               # Homepage styles (UNTOUCHED)
+│   ├── about.css              # NEW — About-page styles (.abt-* prefix)
+│   └── footer.css             # NEW — Reusable global footer (.site-footer)
+├── js/                        # animations.js, script.js, ui.js (UNTOUCHED)
+└── pages/
+    └── about.html             # REBUILT — full About experience + footer
+```
 
 ## User Personas
-- **Citizens of Bharat** exploring how they can help protect cows and support gaushalas
-- **Prospective volunteers** looking to join district-level programs
-- **Farmers / academic researchers** looking for scripture, science and heritage content
-- **Concerned citizens** reporting cows in distress via the helpline
+1. Citizens & Devotees — Discover mission, values, ways to participate.
+2. Volunteers — Understand programs and pathway to join.
+3. Partner Gaushalas / NGOs — Assess credibility, leadership, impact.
+4. Media / Donors — Read Timeline, Impact statistics, leadership.
 
-## Core Requirements (Static)
-- Do NOT modify: navbar, footer, folder structure, CSS variables, existing color palette,
-  typography, animations, responsive system, JS utilities, theme toggle, existing assets.
-- Only modify homepage content between navbar and footer.
-- Reuse existing CSS variables and design system.
-- Fully responsive: desktop / laptop / tablet / mobile — no horizontal overflow.
-- Lightweight CSS-only animations (fade-up, hover-lift, counter, ripple, etc.).
-- Accessibility preserved (semantic HTML, ARIA labels, focus states, reduced-motion support).
-- Premium government-quality aesthetic (Apple × modern NGO × elegant × clean).
+## What's Been Implemented (2026-01)
 
-## What's Been Implemented (Jan 2026)
+### About page (`/pages/about.html`)
+- Hero banner (breadcrumb, gradient headline, mission, Sanskrit quote, dual CTAs, custom SVG cow illustration with floaters: "Since 2019", "1000+ Volunteers")
+- "Our Story" split section with ॐ mandala visual + inline meta stats (28 states, 140+ gaushalas, 24/7 helpline)
+- Mission + Vision — two premium coloured hero cards (green + saffron) with pillar chips
+- Core Values — 6 tinted icon cards (Compassion, Integrity, Service, Dharma, Unity, Sustainability)
+- "Why Cow Protection Matters" — infographic with center ॐ medallion + 6 radiating nodes
+- Timeline — alternating cards (2019 → 2026 roadmap) with animated dots and gradient spine
+- What We Do — 6 program cards (Education, Awareness, Community, Volunteer, Emergency, Research)
+- Leadership — 4 NGO-style leader cards with custom SVG portraits
+- Impact Statistics — dark green section with 4 animated counters (uses existing `data-counter` script)
+- Call To Action — 3 gradient cards (Volunteer, Donate placeholder, Community)
+- "गो सेवा, राष्ट्र सेवा" slogan band — full-width dark hero with animated ॐ, gradient title, ornaments, badge
 
-### Session 1 — Homepage Sections (all 13 delivered)
-1. **Hero** — Powerful headline, description, primary "Become a Volunteer" + secondary "Report a Concern" CTAs, inline SVG cow-on-pasture illustration with sun, hills, lotus flowers, tilak & bell details. Floating trust badges + inline stat strip (28 states, 1000+ volunteers, 24/7 helpline).
-2. **Trust Strip** — 4 government-style cards: Community Driven, Verified Information, Volunteer Network, Cow Protection.
-3. **About GauRakshak Bharat** — Split layout with SVG mandala + Om visual, 4 pillar cards (Who / Why / Mission / Purpose), "Learn More" CTA.
-4. **Why Gau Mata Matters** — 6-card grid: Culture, Agriculture, Environment, Rural Economy, Health, National Identity with unique color tints and hover glows.
-5. **Impact Statistics** — Dark premium band with 4 animated counters (1000+, 250+, 50+, 10000+) using existing `data-counter` utility.
-6. **Featured Initiatives** — 6 modern cards: Emergency Rescue, Gaushala Support, Community Awareness, Education & Research, Volunteer Programs, Natural Farming Revival.
-7. **Knowledge Hub Preview** — 3 featured cards: Bhagavad Gita, A2 Milk Research, Indigenous Breeds + "Explore Knowledge Hub" CTA.
-8. **Community Services** — 4 modern icon cards: Volunteer, Donation, Events, Report & Support with corner tint animation.
-9. **Upcoming Events** — 3 event cards with date badge, time, location, register button, seat count + "View All Events".
-10. **Gallery Preview** — Responsive asymmetric grid (tall + wide tiles) with SVG placeholders and hover overlays + "View Gallery" CTA.
-11. **Volunteer CTA** — Large premium dark box with radar-style visual + primary/secondary buttons.
-12. **FAQ** — Native `<details>/<summary>` accordion with rotating +/x toggle, 6 real questions + "Contact Our Team" fallback.
-13. **Final CTA** — Powerful ending band with dual buttons (Volunteer + Report) and Sanskrit blessing.
+### Global reusable footer (`/css/footer.css`)
+- Brand column (SVG logo mark, mission, "Serving Bharat since 2019" tag)
+- Quick Links + Resources columns
+- Contact column (Email, 24/7 Helpline, Head Office — all placeholders)
+- Full-width newsletter box (placeholder, no backend)
+- Bottom strip: copyright, 6 social icons (Facebook, Twitter, Instagram, YouTube, LinkedIn, WhatsApp), slogan pill "गो सेवा • राष्ट्र सेवा"
+- Fully responsive: 4-col → 2-col → 1-col
 
-### Additional
-- All interactive elements have unique `data-testid` attributes (13 total).
-- Uses existing `[data-animate]`, `data-counter`, `[data-stagger]`, `.ripple-container`, glassmorphism, and hover utilities.
-- New file `/app/css/home.css` added and linked ONLY from `index.html`.
-- Full dark/light theme support inherited from existing tokens.
-- Verified: no horizontal overflow at 1440 / 1200 / 1024 / 390 viewports.
-- All 13 homepage sections work correctly, FAQ accordion opens/closes, counter animates.
+### Design & UX
+- Reuses `variables.css` tokens end-to-end (colours, spacing, radii, shadows, transitions)
+- Reuses `[data-animate]` fade-up/left/right/scale + `data-stagger` and counter script
+- Accessibility: semantic landmarks, `aria-label`, `aria-hidden` on decorative SVGs, focus-visible outlines, `prefers-reduced-motion` guards
+- SEO: page-specific `<title>`, `meta description`, canonical, OG + Twitter cards
+- `data-testid` on primary interactive elements (about-hero-volunteer, about-hero-story, cta-volunteer, cta-donate, cta-community, newsletter-submit)
 
-## Prioritized Backlog
+## What's NOT Touched (by design)
+- `/app/index.html`, `/app/css/home.css`, `/app/css/style.css` (navbar)
+- `/app/css/variables.css`, `/app/css/animations.css`, `/app/css/responsive.css`
+- All `/app/js/*.js`
+- All other pages under `/pages/`
 
-### P1 (Suggested next)
-- Replace SVG hero/gallery placeholders with real photography once assets are provided.
-- Wire event "Register" buttons to a real events backend.
-- Add a lightweight donation modal on service card "Donation" click.
+## Backlog / P1
+- Adopt the same reusable footer on remaining pages (community, contact, events, gallery, knowledge, report, volunteer) — drop-in: link `footer.css` + copy `.site-footer` markup
+- Real backend for newsletter subscription
+- Real donation flow (Razorpay / Stripe)
+- Replace SVG leader portraits with real photos + individual bio pages
+- Multilingual (Hindi + English) toggle
+- Adopt-a-Cow flow with per-cow profile pages
 
-### P2 (Nice to have)
-- Add lazy-loading + `<picture>` responsive images when photos are added.
-- Add scroll-progress indicator for long-form pages.
-- Add a testimonial / voices-from-the-ground section between initiatives and knowledge hub.
-
-## Files Changed This Session
-- **Modified:** `/app/index.html` (linked home.css; replaced 3 placeholder sections in `<main>` with 13 real sections).
-- **Created:** `/app/css/home.css` (all homepage-only styles).
-- **Untouched:** navbar, footer, all other CSS files, all JS files, all `/app/pages/*.html`, all assets.
+## Deployment Notes
+Pure static site. Any static host (Nginx, Vercel, Netlify, GitHub Pages) can
+serve `/app` as-is. In preview environment, a Python `http.server` on port 3000
+is used to serve static files.
