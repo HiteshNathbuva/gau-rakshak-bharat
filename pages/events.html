@@ -23,23 +23,145 @@
 
   <div class="page-wrapper">
 
+    <!-- =============================================
+         HOMEPAGE NAVIGATION
+         ============================================= -->
+
     <header class="navbar" role="banner">
-      <div class="container navbar__inner">
-        <a href="../index.html" class="navbar__brand" aria-label="GauRakshak Bharat — Home">GauRakshak Bharat</a>
-        <nav class="navbar__nav" role="navigation" aria-label="Main navigation">
-          <a href="../index.html" class="navbar__link">Home</a>
-          <a href="about.html" class="navbar__link">About</a>
-          <a href="knowledge.html" class="navbar__link">Knowledge</a>
-          <a href="community.html" class="navbar__link">Community</a>
-          <a href="volunteer.html" class="navbar__link">Volunteer</a>
-          <a href="report.html" class="navbar__link">Report</a>
-          <a href="gallery.html" class="navbar__link">Gallery</a>
-          <a href="events.html" class="navbar__link">Events</a>
-          <a href="contact.html" class="navbar__link">Contact</a>
-        </nav>
-        <div class="navbar__actions">
-          <button id="theme-toggle" class="btn btn--ghost" type="button" aria-label="Toggle dark mode" aria-pressed="false">Theme</button>
-          <button class="navbar__toggle" type="button" aria-label="Toggle navigation menu" aria-expanded="false">☰</button>
+      <div class="container navbar__shell">
+        <div class="navbar__inner">
+          <button
+            class="navbar__toggle"
+            type="button"
+            aria-label="Open navigation menu"
+            aria-expanded="false"
+            aria-controls="mobile-nav">
+            <span class="navbar__toggle-icon" aria-hidden="true">
+              <span class="navbar__toggle-bar"></span>
+              <span class="navbar__toggle-bar"></span>
+              <span class="navbar__toggle-bar"></span>
+            </span>
+          </button>
+
+        <a href="../index.html" class="navbar__brand" aria-label="GauRakshak Bharat — Home">
+          <img src="../assets/icons/Mainlogo.png" alt="GauRakshak Bharat" class="navbar__logo">
+        </a>
+
+          <nav class="navbar__nav" id="main-nav" role="navigation" aria-label="Main navigation">
+            <a href="../index.html" class="navbar__link">Home</a>
+            <a href="about.html" class="navbar__link">About</a>
+            <a href="knowledge.html" class="navbar__link navbar__link--has-icon">
+              <span>Knowledge Hub</span>
+              <svg class="icon icon--chevron" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="m6 9 6 6 6-6"></path>
+              </svg>
+            </a>
+            <a href="community.html" class="navbar__link navbar__link--has-icon">
+              Community
+              <svg class="icon icon--chevron" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="m6 9 6 6 6-6"></path>
+              </svg>
+            </a>
+            <a href="volunteer.html" class="navbar__link">Volunteer</a>
+            <div class="navbar__item navbar__item--dropdown">
+              <button class="navbar__link navbar__link--button navbar__link--has-icon" type="button" aria-expanded="false" aria-haspopup="true">
+                More
+                <svg class="icon icon--chevron" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="m6 9 6 6 6-6"></path>
+                </svg>
+              </button>
+              <div class="navbar__dropdown" role="menu" aria-label="More pages">
+                <a href="events.html" class="navbar__dropdown-link" role="menuitem is-active">
+                  <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M8 2v4M16 2v4M3 10h18"></path>
+                    <rect x="3" y="4" width="18" height="18" rx="2"></rect>
+                  </svg>
+                  Events
+                </a>
+                <a href="gallery.html" class="navbar__dropdown-link" role="menuitem">
+                  <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <rect x="3" y="3" width="18" height="18" rx="2"></rect>
+                    <circle cx="9" cy="9" r="2"></circle>
+                    <path d="m21 15-3.1-3.1a2 2 0 0 0-2.8 0L6 21"></path>
+                  </svg>
+                  Gallery
+                </a>
+                <a href="report.html" class="navbar__dropdown-link" role="menuitem">
+                  <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path>
+                    <path d="M12 8v4M12 16h.01"></path>
+                  </svg>
+                  Report Concerns
+                </a>
+              </div>
+            </div>
+            <a href="contact.html" class="navbar__link">Contact</a>
+          </nav>
+
+          <div class="navbar__actions">
+            <a href="report.html" class="nav-action nav-action--report">
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path>
+                <path d="M12 8v4M12 16h.01"></path>
+              </svg>
+              <span>Report Concern</span>
+            </a>
+            <a href="volunteer.html" class="nav-action nav-action--volunteer">
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+                <path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"></path>
+              </svg>
+              <span>Become Volunteer</span>
+            </a>
+            <button
+              id="theme-toggle"
+              class="theme-toggle"
+              type="button"
+              aria-label="Toggle dark mode"
+              aria-pressed="false">
+              <svg class="icon theme-toggle__moon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+              </svg>
+              <svg class="icon theme-toggle__sun" viewBox="0 0 24 24" aria-hidden="true">
+                <circle cx="12" cy="12" r="4"></circle>
+                <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="navbar__mobile-panel" id="mobile-nav" aria-hidden="true">
+          <div class="mobile-menu">
+            <nav class="mobile-menu__primary" aria-label="Mobile navigation">
+              <a href="../index.html" class="mobile-menu__link is-active"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2h-4v-7H9v7H5a2 2 0 0 1-2-2z"></path></svg>Home</a>
+              <a href="about.html" class="mobile-menu__link"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>About</a>
+              <a href="knowledge.html" class="mobile-menu__link"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M4 4.5A2.5 2.5 0 0 1 6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5z"></path></svg>Knowledge Hub</a>
+              <a href="community.html" class="mobile-menu__link"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"></path></svg>Community</a>
+              <a href="volunteer.html" class="mobile-menu__link"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M11 14h2a2 2 0 1 0 0-4h-3c-.6 0-1.1.2-1.5.6L3 16"></path><path d="m7 20 1.6-1.4c.4-.4.9-.6 1.5-.6H14c.6 0 1.1-.2 1.5-.6l5.5-5.4"></path><path d="m2 15 6 6"></path></svg>Volunteer</a>
+              <a href="contact.html" class="mobile-menu__link"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m22 7-10 6L2 7"></path></svg>Contact</a>
+            </nav>
+
+            <div class="mobile-menu__more" aria-label="More pages">
+              <p class="mobile-menu__heading">More</p>
+              <a href="events.html" class="mobile-menu__link"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 2v4M16 2v4M3 10h18"></path><rect x="3" y="4" width="18" height="18" rx="2"></rect></svg>Events</a>
+              <a href="gallery.html" class="mobile-menu__link"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"></rect><circle cx="9" cy="9" r="2"></circle><path d="m21 15-3.1-3.1a2 2 0 0 0-2.8 0L6 21"></path></svg>Gallery</a>
+              <a href="report.html" class="mobile-menu__link"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path><path d="M12 8v4M12 16h.01"></path></svg>Report Concerns</a>
+            </div>
+
+            <button class="mobile-menu__close" type="button" aria-label="Close navigation menu">
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M18 6 6 18M6 6l12 12"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="navbar__value-strip" aria-label="Platform values">
+          <span class="value-strip__item"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path><path d="m9 12 2 2 4-4"></path></svg>Protecting Cows</span>
+          <span class="value-strip__item"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M19.5 12.6 12 20l-7.5-7.4a5 5 0 1 1 7.1-7.1l.4.4.4-.4a5 5 0 1 1 7.1 7.1Z"></path></svg>Serving Communities</span>
+          <span class="value-strip__item"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M11 20A7 7 0 0 1 4 13c0-7 9-11 16-11 0 7-4 16-11 16Z"></path><path d="M6 18c2-4 5-7 10-9"></path></svg>Preserving Culture</span>
+          <span class="value-strip__item"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 11v2a5 5 0 0 0 10 0v-2"></path><path d="M5 8a7 7 0 0 1 14 0"></path><path d="M12 3v4M4 14l-2 2M20 14l2 2M7 21l2-2M17 21l-2-2"></path></svg>Building a Better Bharat</span>
         </div>
       </div>
     </header>
