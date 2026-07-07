@@ -42,6 +42,7 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/animations.css">
   <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/home.css">
 </head>
 <body>
 
@@ -201,30 +202,1008 @@
          MAIN CONTENT
          Placeholder sections — content added later
          ============================================= -->
-    <main id="main-content" class="main-content" role="main">
+    <main id="main-content" class="main-content home-main" role="main">
 
-      <!-- Section Placeholder 01 -->
-      <section
-        class="section section--placeholder"
-        id="section-01"
-        aria-label="Section placeholder one"
-        data-placeholder-label="Section Placeholder — Content Coming Soon">
+      <!-- =============================================
+           1. HERO
+           ============================================= -->
+      <section class="hero" id="hero" aria-labelledby="hero-title">
+        <div class="hero__inner">
+          <div class="hero__content" data-animate="fade-up">
+            <span class="hero__badge">
+              <span class="dot" aria-hidden="true"></span>
+              A Community Movement of Bharat
+            </span>
+
+            <h1 class="hero__title" id="hero-title">
+              Protecting the sacred bond between
+              <span class="accent">Cows, Culture &amp; Community</span>
+            </h1>
+
+            <p class="hero__desc">
+              GauRakshak Bharat is a citizen-led initiative uniting volunteers, farmers, gaushalas
+              and citizens to safeguard cows, revive Vedic wisdom, and build a compassionate,
+              self-reliant Bharat — rooted in dharma and driven by action.
+            </p>
+
+            <div class="hero__actions">
+              <a href="pages/volunteer.html" class="home-btn home-btn--primary ripple-container" data-testid="hero-volunteer-btn">
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="9" cy="7" r="4"></circle>
+                  <path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"></path>
+                </svg>
+                Become a Volunteer
+              </a>
+              <a href="pages/report.html" class="home-btn home-btn--secondary" data-testid="hero-report-btn">
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path>
+                  <path d="M12 8v4M12 16h.01"></path>
+                </svg>
+                Report a Concern
+              </a>
+            </div>
+
+            <div class="hero__meta" aria-label="Quick statistics">
+              <div class="hero__meta-item">
+                <span class="hero__meta-num">28</span>
+                <span class="hero__meta-label">States Active</span>
+              </div>
+              <span class="hero__meta-sep" aria-hidden="true"></span>
+              <div class="hero__meta-item">
+                <span class="hero__meta-num">1000+</span>
+                <span class="hero__meta-label">Volunteers</span>
+              </div>
+              <span class="hero__meta-sep" aria-hidden="true"></span>
+              <div class="hero__meta-item">
+                <span class="hero__meta-num">24/7</span>
+                <span class="hero__meta-label">Helpline</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero__visual" data-animate="fade-left" aria-hidden="true">
+            <div class="hero__illustration">
+              <svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#fff3d9"/>
+                    <stop offset="100%" stop-color="#ffe4b3"/>
+                  </linearGradient>
+                  <linearGradient id="ground" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#c8e5be"/>
+                    <stop offset="100%" stop-color="#9fd18f"/>
+                  </linearGradient>
+                  <linearGradient id="body" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0%" stop-color="#ffffff"/>
+                    <stop offset="100%" stop-color="#f5e6d3"/>
+                  </linearGradient>
+                  <radialGradient id="sun" cx="50%" cy="50%" r="50%">
+                    <stop offset="0%" stop-color="#ffd97a"/>
+                    <stop offset="100%" stop-color="#f5821f"/>
+                  </radialGradient>
+                </defs>
+
+                <!-- Sky -->
+                <rect width="500" height="320" fill="url(#sky)"/>
+                <!-- Sun -->
+                <circle cx="380" cy="130" r="52" fill="url(#sun)" opacity="0.9"/>
+                <circle cx="380" cy="130" r="72" fill="#f5821f" opacity="0.12"/>
+                <circle cx="380" cy="130" r="92" fill="#f5821f" opacity="0.06"/>
+
+                <!-- Hills -->
+                <path d="M0 300 Q 120 220 240 280 T 500 260 L 500 340 L 0 340 Z" fill="#4a9a38" opacity="0.35"/>
+                <path d="M0 320 Q 140 260 280 300 T 500 290 L 500 360 L 0 360 Z" fill="#3a7c2c" opacity="0.55"/>
+
+                <!-- Ground -->
+                <rect y="320" width="500" height="180" fill="url(#ground)"/>
+
+                <!-- Trees -->
+                <g opacity="0.85">
+                  <circle cx="70" cy="290" r="28" fill="#2f6325"/>
+                  <rect x="66" y="300" width="8" height="30" fill="#7a5030"/>
+                  <circle cx="450" cy="300" r="22" fill="#3a7c2c"/>
+                  <rect x="447" y="308" width="6" height="24" fill="#7a5030"/>
+                </g>
+
+                <!-- Cow -->
+                <g transform="translate(150 200)">
+                  <!-- Body -->
+                  <ellipse cx="120" cy="130" rx="110" ry="60" fill="url(#body)" stroke="#c9a878" stroke-width="2"/>
+                  <!-- Back patch -->
+                  <path d="M60 100 Q 100 80 140 105 Q 160 90 190 110 Q 175 130 130 135 Q 90 138 60 120 Z" fill="#8b4513" opacity="0.85"/>
+                  <!-- Legs -->
+                  <rect x="55" y="175" width="14" height="60" rx="4" fill="#e8d5b7" stroke="#c9a878" stroke-width="2"/>
+                  <rect x="95" y="180" width="14" height="60" rx="4" fill="#e8d5b7" stroke="#c9a878" stroke-width="2"/>
+                  <rect x="140" y="180" width="14" height="60" rx="4" fill="#e8d5b7" stroke="#c9a878" stroke-width="2"/>
+                  <rect x="180" y="175" width="14" height="60" rx="4" fill="#e8d5b7" stroke="#c9a878" stroke-width="2"/>
+                  <!-- Hooves -->
+                  <rect x="53" y="230" width="18" height="8" rx="2" fill="#4a2c15"/>
+                  <rect x="93" y="235" width="18" height="8" rx="2" fill="#4a2c15"/>
+                  <rect x="138" y="235" width="18" height="8" rx="2" fill="#4a2c15"/>
+                  <rect x="178" y="230" width="18" height="8" rx="2" fill="#4a2c15"/>
+                  <!-- Tail -->
+                  <path d="M225 120 Q 250 130 245 160 Q 240 175 235 170" stroke="#c9a878" stroke-width="4" fill="none" stroke-linecap="round"/>
+                  <circle cx="235" cy="172" r="6" fill="#8b4513"/>
+
+                  <!-- Head -->
+                  <ellipse cx="35" cy="95" rx="42" ry="34" fill="url(#body)" stroke="#c9a878" stroke-width="2"/>
+                  <!-- Muzzle -->
+                  <ellipse cx="10" cy="108" rx="20" ry="14" fill="#f5c8a0" stroke="#c9a878" stroke-width="2"/>
+                  <circle cx="4" cy="106" r="2" fill="#4a2c15"/>
+                  <circle cx="16" cy="106" r="2" fill="#4a2c15"/>
+                  <!-- Eyes -->
+                  <ellipse cx="42" cy="86" rx="4" ry="5" fill="#2c1810"/>
+                  <circle cx="43" cy="84" r="1.4" fill="#fff"/>
+                  <!-- Ears -->
+                  <path d="M60 78 Q 78 68 82 88 Q 76 92 65 88 Z" fill="#8b4513"/>
+                  <path d="M20 74 Q 8 62 4 82 Q 12 88 22 84 Z" fill="#e8d5b7" stroke="#c9a878" stroke-width="1.5"/>
+                  <!-- Horns -->
+                  <path d="M62 68 Q 72 48 68 40" stroke="#d4b896" stroke-width="5" fill="none" stroke-linecap="round"/>
+                  <path d="M28 66 Q 20 46 24 38" stroke="#d4b896" stroke-width="5" fill="none" stroke-linecap="round"/>
+
+                  <!-- Tilak on forehead -->
+                  <path d="M32 72 L 32 82 M28 76 L 36 76" stroke="#f5821f" stroke-width="2.2" stroke-linecap="round"/>
+                  <!-- Bell -->
+                  <line x1="35" y1="128" x2="35" y2="140" stroke="#8b4513" stroke-width="2"/>
+                  <path d="M28 140 L 42 140 L 40 152 L 30 152 Z" fill="#f5c034" stroke="#b8860b" stroke-width="1.5"/>
+                  <circle cx="35" cy="154" r="2" fill="#8b4513"/>
+                </g>
+
+                <!-- Lotus flowers -->
+                <g transform="translate(60 400)" opacity="0.9">
+                  <ellipse cx="0" cy="0" rx="14" ry="6" fill="#ffb7c5" transform="rotate(-30)"/>
+                  <ellipse cx="0" cy="0" rx="14" ry="6" fill="#ff9ab4" transform="rotate(30)"/>
+                  <ellipse cx="0" cy="0" rx="14" ry="6" fill="#ffc9d6"/>
+                  <circle cx="0" cy="0" r="4" fill="#f5c034"/>
+                </g>
+                <g transform="translate(430 410)" opacity="0.9">
+                  <ellipse cx="0" cy="0" rx="10" ry="4" fill="#ffb7c5" transform="rotate(-30)"/>
+                  <ellipse cx="0" cy="0" rx="10" ry="4" fill="#ff9ab4" transform="rotate(30)"/>
+                  <ellipse cx="0" cy="0" rx="10" ry="4" fill="#ffc9d6"/>
+                  <circle cx="0" cy="0" r="3" fill="#f5c034"/>
+                </g>
+
+                <!-- Grass tufts -->
+                <g stroke="#2f6325" stroke-width="2" stroke-linecap="round" opacity="0.6">
+                  <path d="M30 470 L 30 455 M35 470 L 38 455 M25 470 L 22 456"/>
+                  <path d="M470 465 L 470 450 M475 465 L 478 450 M465 465 L 462 451"/>
+                  <path d="M240 480 L 240 465 M245 480 L 248 465 M235 480 L 232 466"/>
+                </g>
+              </svg>
+            </div>
+
+            <div class="hero__floater hero__floater--top">
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path>
+                <path d="m9 12 2 2 4-4"></path>
+              </svg>
+              Verified Volunteers
+            </div>
+
+            <div class="hero__floater hero__floater--bottom">
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+              </svg>
+              Serving Since 2019
+            </div>
+          </div>
+        </div>
       </section>
 
-      <!-- Section Placeholder 02 -->
-      <section
-        class="section section--placeholder section--subtle"
-        id="section-02"
-        aria-label="Section placeholder two"
-        data-placeholder-label="Section Placeholder — Content Coming Soon">
+      <!-- =============================================
+           2. TRUST STRIP
+           ============================================= -->
+      <section class="trust" aria-label="Our commitments">
+        <div class="trust__grid" data-stagger>
+          <div class="trust__card" data-animate="fade-up">
+            <div class="trust__check" aria-hidden="true">
+              <svg class="icon" viewBox="0 0 24 24"><path d="m5 12 5 5L20 7"></path></svg>
+            </div>
+            <div>
+              <span class="trust__label">Community Driven</span>
+              <span class="trust__sub">Powered by citizens of Bharat</span>
+            </div>
+          </div>
+          <div class="trust__card" data-animate="fade-up">
+            <div class="trust__check" aria-hidden="true">
+              <svg class="icon" viewBox="0 0 24 24"><path d="m5 12 5 5L20 7"></path></svg>
+            </div>
+            <div>
+              <span class="trust__label">Verified Information</span>
+              <span class="trust__sub">Sourced from scriptures &amp; science</span>
+            </div>
+          </div>
+          <div class="trust__card" data-animate="fade-up">
+            <div class="trust__check" aria-hidden="true">
+              <svg class="icon" viewBox="0 0 24 24"><path d="m5 12 5 5L20 7"></path></svg>
+            </div>
+            <div>
+              <span class="trust__label">Volunteer Network</span>
+              <span class="trust__sub">1000+ trained across 28 states</span>
+            </div>
+          </div>
+          <div class="trust__card" data-animate="fade-up">
+            <div class="trust__check" aria-hidden="true">
+              <svg class="icon" viewBox="0 0 24 24"><path d="m5 12 5 5L20 7"></path></svg>
+            </div>
+            <div>
+              <span class="trust__label">Cow Protection</span>
+              <span class="trust__sub">Lawful, ethical &amp; peaceful action</span>
+            </div>
+          </div>
+        </div>
       </section>
 
-      <!-- Section Placeholder 03 -->
-      <section
-        class="section section--placeholder"
-        id="section-03"
-        aria-label="Section placeholder three"
-        data-placeholder-label="Section Placeholder — Content Coming Soon">
+      <!-- =============================================
+           3. ABOUT GAURAKSHAK BHARAT
+           ============================================= -->
+      <section class="home-section" id="about" aria-labelledby="about-title">
+        <div class="about__grid">
+          <div class="about__visual" data-animate="fade-right" aria-hidden="true">
+            <svg viewBox="0 0 400 500" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="ab-bg" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0%" stop-color="#f3f9f1"/>
+                  <stop offset="100%" stop-color="#e4f2df"/>
+                </linearGradient>
+              </defs>
+              <rect width="400" height="500" fill="url(#ab-bg)"/>
+              <!-- Mandala pattern -->
+              <g transform="translate(200 220)" opacity="0.28" fill="none" stroke="#3a7c2c" stroke-width="1.5">
+                <circle r="150"/>
+                <circle r="120"/>
+                <circle r="90"/>
+                <circle r="60"/>
+                <g>
+                  <path d="M-150 0 L 150 0 M 0 -150 L 0 150 M -106 -106 L 106 106 M -106 106 L 106 -106"/>
+                </g>
+                <g stroke="#f5821f">
+                  <circle r="30"/>
+                  <path d="M0 -60 L 15 -30 L 0 0 L -15 -30 Z"/>
+                  <path d="M0 60 L 15 30 L 0 0 L -15 30 Z"/>
+                  <path d="M-60 0 L -30 15 L 0 0 L -30 -15 Z"/>
+                  <path d="M60 0 L 30 15 L 0 0 L 30 -15 Z"/>
+                </g>
+              </g>
+
+              <!-- Silhouettes -->
+              <g transform="translate(80 340)">
+                <ellipse cx="60" cy="90" rx="52" ry="28" fill="#3a7c2c"/>
+                <rect x="30" y="105" width="8" height="35" fill="#3a7c2c"/>
+                <rect x="52" y="108" width="8" height="35" fill="#3a7c2c"/>
+                <rect x="72" y="108" width="8" height="35" fill="#3a7c2c"/>
+                <rect x="90" y="105" width="8" height="35" fill="#3a7c2c"/>
+                <circle cx="18" cy="76" r="18" fill="#3a7c2c"/>
+                <path d="M28 62 Q 34 48 28 42 M12 60 Q 6 46 12 40" stroke="#3a7c2c" stroke-width="3" fill="none" stroke-linecap="round"/>
+              </g>
+              <g transform="translate(220 360)">
+                <circle cx="30" cy="60" r="18" fill="#f5821f" opacity="0.85"/>
+                <path d="M12 78 L 12 130 L 48 130 L 48 78 Z" fill="#f5821f" opacity="0.85"/>
+                <circle cx="90" cy="65" r="15" fill="#d96512" opacity="0.85"/>
+                <path d="M75 80 L 75 130 L 105 130 L 105 80 Z" fill="#d96512" opacity="0.85"/>
+              </g>
+              <!-- Om symbol -->
+              <text x="200" y="140" text-anchor="middle" font-size="80" fill="#f5821f" opacity="0.7" font-family="serif" font-weight="bold">ॐ</text>
+            </svg>
+
+            <div class="about__stat">
+              <div class="about__stat-num">Since 2019</div>
+              <div class="about__stat-label">Serving Bharat with dharma-driven action</div>
+            </div>
+          </div>
+
+          <div class="about__content" data-animate="fade-left">
+            <div class="home-section__head home-section__head--left">
+              <span class="home-section__eyebrow"><span class="dot"></span>About Us</span>
+              <h2 class="home-section__title">Rooted in <span class="accent">Dharma</span>, driven by service.</h2>
+              <p class="home-section__lede">
+                GauRakshak Bharat is a nationwide platform where citizens, scholars, farmers and volunteers
+                unite to protect the cow — Gau Mata — and revive her role in India's agriculture,
+                spirituality and daily life. We work through education, community outreach and lawful
+                on-ground support.
+              </p>
+            </div>
+
+            <div class="about__pillars">
+              <div class="about__pillar">
+                <div class="about__pillar-icon"><svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="8" r="5"></circle><path d="M20 21a8 8 0 0 0-16 0"></path></svg></div>
+                <div>
+                  <h4>Who we are</h4>
+                  <p>A grassroots network of Bharatiyas serving Gau Mata.</p>
+                </div>
+              </div>
+              <div class="about__pillar">
+                <div class="about__pillar-icon"><svg class="icon" viewBox="0 0 24 24"><path d="M12 2 3 7l9 5 9-5-9-5z"></path><path d="m3 17 9 5 9-5M3 12l9 5 9-5"></path></svg></div>
+                <div>
+                  <h4>Why it matters</h4>
+                  <p>Cows sustain soil, health, culture and rural livelihoods.</p>
+                </div>
+              </div>
+              <div class="about__pillar">
+                <div class="about__pillar-icon"><svg class="icon" viewBox="0 0 24 24"><path d="m12 2 3 7 7 .5-5.5 4.5 2 7.5L12 17l-6.5 4 2-7.5L2 9.5 9 9z"></path></svg></div>
+                <div>
+                  <h4>Our mission</h4>
+                  <p>Protect cows, empower gaushalas, educate the next generation.</p>
+                </div>
+              </div>
+              <div class="about__pillar">
+                <div class="about__pillar-icon"><svg class="icon" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></div>
+                <div>
+                  <h4>Our purpose</h4>
+                  <p>A compassionate, self-reliant Bharat rooted in ahimsa.</p>
+                </div>
+              </div>
+            </div>
+
+            <div style="margin-top: var(--space-8);">
+              <a href="pages/about.html" class="home-btn home-btn--ghost" data-testid="about-learn-more-btn">
+                Learn More About Us
+                <svg class="icon" viewBox="0 0 24 24"><path d="M5 12h14M13 5l7 7-7 7"></path></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =============================================
+           4. WHY GAU MATA MATTERS
+           ============================================= -->
+      <section class="home-section home-section--subtle" id="why" aria-labelledby="why-title">
+        <div class="home-section__head" data-animate="fade-up">
+          <span class="home-section__eyebrow"><span class="dot"></span>The Sacred Bond</span>
+          <h2 class="home-section__title" id="why-title">Why <span class="accent">Gau Mata</span> Matters</h2>
+          <p class="home-section__lede">
+            From the Vedas to modern research, the cow's role in shaping Bharat spans five essential dimensions.
+          </p>
+        </div>
+
+        <div class="why__grid" data-stagger>
+          <div class="why__card why__card--culture" data-animate="fade-up">
+            <div class="why__icon">
+              <svg class="icon" viewBox="0 0 24 24"><path d="M4 22h16M6 22V10l6-6 6 6v12M10 22v-6h4v6M9 13h1M14 13h1"></path></svg>
+            </div>
+            <h3>Culture &amp; Spirituality</h3>
+            <p>Revered in Vedas, Puranas and daily rituals, Gau Mata is the living embodiment of dharma, motherhood and prosperity across Sanatan tradition.</p>
+          </div>
+
+          <div class="why__card why__card--agriculture" data-animate="fade-up">
+            <div class="why__icon">
+              <svg class="icon" viewBox="0 0 24 24"><path d="M12 22V8M5 12c0-3 3-6 7-6s7 3 7 6M8 22h8"></path><path d="M12 8c-2-1-5-1-7 1M12 8c2-1 5-1 7 1"></path></svg>
+            </div>
+            <h3>Agriculture</h3>
+            <p>Indigenous breeds fertilise soil, power natural farming and support bullock-driven agriculture — the backbone of sustainable rural India.</p>
+          </div>
+
+          <div class="why__card why__card--environment" data-animate="fade-up">
+            <div class="why__icon">
+              <svg class="icon" viewBox="0 0 24 24"><path d="M11 20A7 7 0 0 1 4 13c0-7 9-11 16-11 0 7-4 16-11 16Z"></path><path d="M6 18c2-4 5-7 10-9"></path></svg>
+            </div>
+            <h3>Environment</h3>
+            <p>Cow dung and urine enrich soil, reduce chemical dependency and lower carbon footprint — restoring ecological balance to our farmlands.</p>
+          </div>
+
+          <div class="why__card why__card--economy" data-animate="fade-up">
+            <div class="why__icon">
+              <svg class="icon" viewBox="0 0 24 24"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+            </div>
+            <h3>Rural Economy</h3>
+            <p>Dairy, panchagavya products and organic inputs generate livelihood for millions — anchoring self-reliant, village-based economies.</p>
+          </div>
+
+          <div class="why__card why__card--health" data-animate="fade-up">
+            <div class="why__icon">
+              <svg class="icon" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+            </div>
+            <h3>Health &amp; Wellness</h3>
+            <p>A2 milk, ghee and Ayurvedic formulations from desi cows nourish the body, sharpen the mind and preserve time-tested wellness traditions.</p>
+          </div>
+
+          <div class="why__card why__card--agriculture" data-animate="fade-up">
+            <div class="why__icon">
+              <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><path d="M12 2v20M2 12h20"></path></svg>
+            </div>
+            <h3>National Identity</h3>
+            <p>The cow symbolises the soul of Bharat — a living link between our past, present and a compassionate, dharma-guided future.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- =============================================
+           5. IMPACT STATISTICS
+           ============================================= -->
+      <section class="home-section impact" id="impact" aria-labelledby="impact-title">
+        <div class="impact__head home-section__head" data-animate="fade-up">
+          <span class="home-section__eyebrow"><span class="dot"></span>Our Journey</span>
+          <h2 class="home-section__title" id="impact-title">Impact Across Bharat</h2>
+          <p class="home-section__lede">Every rescue, every workshop, every volunteer strengthens our shared purpose.</p>
+        </div>
+
+        <div class="impact__grid" data-stagger>
+          <div class="impact__stat" data-animate="fade-up">
+            <div class="impact__stat-num">
+              <span data-counter="1000" data-counter-suffix="">0</span><span class="impact__stat-suffix">+</span>
+            </div>
+            <div class="impact__stat-label">Active Volunteers</div>
+            <div class="impact__stat-sub">Trained citizens on the ground across 28 states.</div>
+          </div>
+          <div class="impact__stat" data-animate="fade-up">
+            <div class="impact__stat-num">
+              <span data-counter="250" data-counter-suffix="">0</span><span class="impact__stat-suffix">+</span>
+            </div>
+            <div class="impact__stat-label">Rescue Operations</div>
+            <div class="impact__stat-sub">Lawful rescues coordinated with local authorities.</div>
+          </div>
+          <div class="impact__stat" data-animate="fade-up">
+            <div class="impact__stat-num">
+              <span data-counter="50" data-counter-suffix="">0</span><span class="impact__stat-suffix">+</span>
+            </div>
+            <div class="impact__stat-label">Community Events</div>
+            <div class="impact__stat-sub">Workshops, satsangs and awareness campaigns hosted.</div>
+          </div>
+          <div class="impact__stat" data-animate="fade-up">
+            <div class="impact__stat-num">
+              <span data-counter="10000" data-counter-suffix="">0</span><span class="impact__stat-suffix">+</span>
+            </div>
+            <div class="impact__stat-label">People Connected</div>
+            <div class="impact__stat-sub">Citizens engaged through our digital &amp; local networks.</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =============================================
+           6. FEATURED INITIATIVES
+           ============================================= -->
+      <section class="home-section" id="initiatives" aria-labelledby="init-title">
+        <div class="home-section__head" data-animate="fade-up">
+          <span class="home-section__eyebrow"><span class="dot"></span>Our Work</span>
+          <h2 class="home-section__title" id="init-title">Featured <span class="accent">Initiatives</span></h2>
+          <p class="home-section__lede">Structured programs that turn compassion into on-ground action.</p>
+        </div>
+
+        <div class="initiatives__grid" data-stagger>
+          <article class="init-card" data-animate="fade-up">
+            <span class="init-card__badge">Priority</span>
+            <div class="init-card__icon">
+              <svg class="icon" viewBox="0 0 24 24"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path><path d="m9 12 2 2 4-4"></path></svg>
+            </div>
+            <h3>Emergency Rescue</h3>
+            <p>24/7 helpline and rapid-response volunteer teams that assist injured, abandoned or endangered cows through lawful channels.</p>
+            <a href="pages/community.html" class="home-btn home-btn--link">Learn More <svg class="icon" viewBox="0 0 24 24"><path d="M5 12h14M13 5l7 7-7 7"></path></svg></a>
+          </article>
+
+          <article class="init-card" data-animate="fade-up">
+            <div class="init-card__icon">
+              <svg class="icon" viewBox="0 0 24 24"><path d="M3 21h18M3 10h18M5 6l7-3 7 3M4 10v11M20 10v11M8 14v3M12 14v3M16 14v3"></path></svg>
+            </div>
+            <h3>Gaushala Support</h3>
+            <p>Fodder drives, medical camps, infrastructure aid and financial support for gaushalas caring for rescued and elderly cows.</p>
+            <a href="pages/community.html" class="home-btn home-btn--link">Learn More <svg class="icon" viewBox="0 0 24 24"><path d="M5 12h14M13 5l7 7-7 7"></path></svg></a>
+          </article>
+
+          <article class="init-card" data-animate="fade-up">
+            <div class="init-card__icon">
+              <svg class="icon" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+            </div>
+            <h3>Community Awareness</h3>
+            <p>Talks, satsangs and village outreach that reconnect citizens with the cultural and ecological significance of Gau Mata.</p>
+            <a href="pages/community.html" class="home-btn home-btn--link">Learn More <svg class="icon" viewBox="0 0 24 24"><path d="M5 12h14M13 5l7 7-7 7"></path></svg></a>
+          </article>
+
+          <article class="init-card" data-animate="fade-up">
+            <div class="init-card__icon">
+              <svg class="icon" viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M4 4.5A2.5 2.5 0 0 1 6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5z"></path></svg>
+            </div>
+            <h3>Education &amp; Research</h3>
+            <p>Curriculum-aligned modules, scientific papers and scriptural studies making cow-protection accessible to schools and universities.</p>
+            <a href="pages/knowledge.html" class="home-btn home-btn--link">Learn More <svg class="icon" viewBox="0 0 24 24"><path d="M5 12h14M13 5l7 7-7 7"></path></svg></a>
+          </article>
+
+          <article class="init-card" data-animate="fade-up">
+            <div class="init-card__icon">
+              <svg class="icon" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+            </div>
+            <h3>Volunteer Programs</h3>
+            <p>Structured onboarding, training and district-level teams for citizens who want to serve Gau Mata with time or skill.</p>
+            <a href="pages/volunteer.html" class="home-btn home-btn--link">Learn More <svg class="icon" viewBox="0 0 24 24"><path d="M5 12h14M13 5l7 7-7 7"></path></svg></a>
+          </article>
+
+          <article class="init-card" data-animate="fade-up">
+            <span class="init-card__badge">New</span>
+            <div class="init-card__icon">
+              <svg class="icon" viewBox="0 0 24 24"><path d="M12 2 3 7l9 5 9-5-9-5zM3 12l9 5 9-5M3 17l9 5 9-5"></path></svg>
+            </div>
+            <h3>Natural Farming Revival</h3>
+            <p>Empowering farmers to adopt gau-based zero-budget natural farming through hands-on training and grassroots support networks.</p>
+            <a href="pages/knowledge.html" class="home-btn home-btn--link">Learn More <svg class="icon" viewBox="0 0 24 24"><path d="M5 12h14M13 5l7 7-7 7"></path></svg></a>
+          </article>
+        </div>
+      </section>
+
+      <!-- =============================================
+           7. KNOWLEDGE HUB PREVIEW
+           ============================================= -->
+      <section class="home-section home-section--subtle" id="knowledge" aria-labelledby="k-title">
+        <div class="knowledge__wrap">
+          <div class="knowledge__header" data-animate="fade-up">
+            <div>
+              <span class="home-section__eyebrow"><span class="dot"></span>Knowledge Hub</span>
+              <h2 class="home-section__title" style="margin-top: var(--space-4);" id="k-title">Wisdom for a <span class="accent">new Bharat</span></h2>
+              <p class="home-section__lede" style="max-width: 520px;">Curated scripture, research and heritage — from the Bhagavad Gita to modern peer-reviewed studies.</p>
+            </div>
+            <a href="pages/knowledge.html" class="home-btn home-btn--ghost" data-testid="explore-knowledge-btn">
+              Explore Knowledge Hub
+              <svg class="icon" viewBox="0 0 24 24"><path d="M5 12h14M13 5l7 7-7 7"></path></svg>
+            </a>
+          </div>
+
+          <div class="knowledge__grid" data-stagger>
+            <article class="knowledge-card" data-animate="fade-up">
+              <div class="knowledge-card__media" aria-hidden="true">
+                <svg viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg">
+                  <defs><linearGradient id="kg1" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#fff8ed"/><stop offset="100%" stop-color="#ffdba8"/></linearGradient></defs>
+                  <rect width="400" height="250" fill="url(#kg1)"/>
+                  <text x="200" y="150" text-anchor="middle" font-size="120" fill="#d96512" opacity="0.55" font-family="serif" font-weight="bold">ॐ</text>
+                  <path d="M120 200 Q 200 170 280 200" stroke="#b44d10" stroke-width="2" fill="none" opacity="0.5"/>
+                </svg>
+                <span class="knowledge-card__tag">Scripture</span>
+              </div>
+              <div class="knowledge-card__body">
+                <h3>Bhagavad Gita on Gau Seva</h3>
+                <p>Explore Lord Krishna's teachings on selfless service, dharma and the sacred role of the cow in spiritual life.</p>
+                <div class="knowledge-card__meta">
+                  <span>8 min read</span><span class="dot"></span><span>Scripture</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="knowledge-card" data-animate="fade-up">
+              <div class="knowledge-card__media" aria-hidden="true">
+                <svg viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg">
+                  <defs><linearGradient id="kg2" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#eefbf9"/><stop offset="100%" stop-color="#aeeae1"/></linearGradient></defs>
+                  <rect width="400" height="250" fill="url(#kg2)"/>
+                  <g transform="translate(200 125)" fill="none" stroke="#18534f" stroke-width="2.4" opacity="0.7">
+                    <circle r="60"/>
+                    <circle r="40"/>
+                    <circle r="20"/>
+                    <path d="M-70 0 L 70 0 M 0 -70 L 0 70 M -50 -50 L 50 50 M -50 50 L 50 -50"/>
+                  </g>
+                </svg>
+                <span class="knowledge-card__tag">Research</span>
+              </div>
+              <div class="knowledge-card__body">
+                <h3>Scientific Studies on A2 Milk</h3>
+                <p>Modern research validating the nutritional and therapeutic benefits of milk from indigenous Bharatiya cow breeds.</p>
+                <div class="knowledge-card__meta">
+                  <span>12 min read</span><span class="dot"></span><span>Peer-reviewed</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="knowledge-card" data-animate="fade-up">
+              <div class="knowledge-card__media" aria-hidden="true">
+                <svg viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg">
+                  <defs><linearGradient id="kg3" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#f3f9f1"/><stop offset="100%" stop-color="#9fd18f"/></linearGradient></defs>
+                  <rect width="400" height="250" fill="url(#kg3)"/>
+                  <g transform="translate(200 130)" fill="none" stroke="#2f6325" stroke-width="2.4" opacity="0.8">
+                    <path d="M-70 40 Q -70 -20 0 -40 Q 70 -20 70 40" />
+                    <path d="M-40 40 Q -40 -5 0 -20 Q 40 -5 40 40"/>
+                    <path d="M0 40 L 0 -40 M -50 0 L 50 0"/>
+                  </g>
+                  <text x="200" y="200" text-anchor="middle" font-size="14" fill="#274f20" opacity="0.6" font-weight="600">Heritage of Bharat</text>
+                </svg>
+                <span class="knowledge-card__tag">Heritage</span>
+              </div>
+              <div class="knowledge-card__body">
+                <h3>Indigenous Cow Breeds of India</h3>
+                <p>Discover Gir, Sahiwal, Tharparkar and other native breeds — the resilient guardians of India's dairy heritage.</p>
+                <div class="knowledge-card__meta">
+                  <span>10 min read</span><span class="dot"></span><span>Heritage</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- =============================================
+           8. COMMUNITY SERVICES
+           ============================================= -->
+      <section class="home-section" id="services" aria-labelledby="s-title">
+        <div class="home-section__head" data-animate="fade-up">
+          <span class="home-section__eyebrow"><span class="dot"></span>Get Involved</span>
+          <h2 class="home-section__title" id="s-title">How You Can <span class="accent">Contribute</span></h2>
+          <p class="home-section__lede">Every hand, every rupee, every voice strengthens the movement.</p>
+        </div>
+
+        <div class="services__grid" data-stagger>
+          <a href="pages/volunteer.html" class="service-card service-card--volunteer" data-animate="fade-up" data-testid="service-volunteer">
+            <div class="service-card__icon">
+              <svg class="icon" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+            </div>
+            <h3>Volunteer</h3>
+            <p>Join district teams, help in rescue missions, or contribute your professional skills online.</p>
+          </a>
+
+          <a href="pages/community.html" class="service-card service-card--donation" data-animate="fade-up" data-testid="service-donation">
+            <div class="service-card__icon">
+              <svg class="icon" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+            </div>
+            <h3>Donation</h3>
+            <p>Fund fodder drives, medical care and gaushala infrastructure with transparent, verified contributions.</p>
+          </a>
+
+          <a href="pages/events.html" class="service-card service-card--events" data-animate="fade-up" data-testid="service-events">
+            <div class="service-card__icon">
+              <svg class="icon" viewBox="0 0 24 24"><path d="M8 2v4M16 2v4M3 10h18"></path><rect x="3" y="4" width="18" height="18" rx="2"></rect></svg>
+            </div>
+            <h3>Events</h3>
+            <p>Attend workshops, satsangs, seminars and community meets happening near you across Bharat.</p>
+          </a>
+
+          <a href="pages/report.html" class="service-card service-card--support" data-animate="fade-up" data-testid="service-support">
+            <div class="service-card__icon">
+              <svg class="icon" viewBox="0 0 24 24"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path><path d="M12 8v4M12 16h.01"></path></svg>
+            </div>
+            <h3>Report &amp; Support</h3>
+            <p>Alert us to any cow in distress — our 24/7 helpline coordinates lawful rescue and medical response.</p>
+          </a>
+        </div>
+      </section>
+
+      <!-- =============================================
+           9. UPCOMING EVENTS
+           ============================================= -->
+      <section class="home-section home-section--subtle" id="events" aria-labelledby="ev-title">
+        <div class="events__wrap">
+          <div class="home-section__head" data-animate="fade-up">
+            <span class="home-section__eyebrow"><span class="dot"></span>Save the Date</span>
+            <h2 class="home-section__title" id="ev-title">Upcoming <span class="accent">Events</span></h2>
+            <p class="home-section__lede">Join us at workshops, satsangs and awareness drives happening near you.</p>
+          </div>
+
+          <div class="events__grid" data-stagger>
+            <article class="event-card" data-animate="fade-up">
+              <div class="event-card__date" aria-hidden="true">
+                <span class="event-card__day">14</span>
+                <span class="event-card__month">Feb</span>
+              </div>
+              <div class="event-card__body">
+                <div class="event-card__meta">
+                  <span><svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg>10:00 AM</span>
+                  <span><svg class="icon" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>Vrindavan, UP</span>
+                </div>
+                <h3>Gau Seva Satsang &amp; Fodder Drive</h3>
+                <p>Community gathering, kirtan and organized fodder distribution across three neighbourhood gaushalas.</p>
+                <div class="event-card__foot">
+                  <a href="pages/events.html" class="home-btn home-btn--primary">Register</a>
+                  <span class="event-card__seats">120 registered</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="event-card" data-animate="fade-up">
+              <div class="event-card__date" aria-hidden="true">
+                <span class="event-card__day">23</span>
+                <span class="event-card__month">Feb</span>
+              </div>
+              <div class="event-card__body">
+                <div class="event-card__meta">
+                  <span><svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg>4:00 PM</span>
+                  <span><svg class="icon" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>Anand, Gujarat</span>
+                </div>
+                <h3>Natural Farming Workshop</h3>
+                <p>Hands-on training in gau-based zero-budget farming for farmers, students and enthusiasts.</p>
+                <div class="event-card__foot">
+                  <a href="pages/events.html" class="home-btn home-btn--primary">Register</a>
+                  <span class="event-card__seats">86 registered</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="event-card" data-animate="fade-up">
+              <div class="event-card__date" aria-hidden="true">
+                <span class="event-card__day">09</span>
+                <span class="event-card__month">Mar</span>
+              </div>
+              <div class="event-card__body">
+                <div class="event-card__meta">
+                  <span><svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg>9:00 AM</span>
+                  <span><svg class="icon" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>Pune, Maharashtra</span>
+                </div>
+                <h3>Volunteer Training Camp</h3>
+                <p>Two-day orientation and field training for new district-level volunteer coordinators.</p>
+                <div class="event-card__foot">
+                  <a href="pages/events.html" class="home-btn home-btn--primary">Register</a>
+                  <span class="event-card__seats">54 registered</span>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div class="events__all">
+            <a href="pages/events.html" class="home-btn home-btn--ghost" data-testid="view-all-events-btn">
+              View All Events
+              <svg class="icon" viewBox="0 0 24 24"><path d="M5 12h14M13 5l7 7-7 7"></path></svg>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- =============================================
+           10. GALLERY PREVIEW
+           ============================================= -->
+      <section class="home-section" id="gallery" aria-labelledby="g-title">
+        <div class="gallery__wrap">
+          <div class="home-section__head" data-animate="fade-up">
+            <span class="home-section__eyebrow"><span class="dot"></span>Gallery</span>
+            <h2 class="home-section__title" id="g-title">Moments of <span class="accent">Compassion</span></h2>
+            <p class="home-section__lede">Glimpses from rescues, satsangs, workshops and communities we serve.</p>
+          </div>
+
+          <div class="gallery__grid" data-animate="fade-up" role="list">
+            <div class="gallery__item gallery__item--tall" role="listitem">
+              <svg viewBox="0 0 400 500" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <defs><linearGradient id="g1" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#ffdba8"/><stop offset="100%" stop-color="#f5821f"/></linearGradient></defs>
+                <rect width="400" height="500" fill="url(#g1)"/>
+                <circle cx="300" cy="120" r="60" fill="#fff" opacity="0.4"/>
+                <path d="M0 380 Q 200 320 400 380 L 400 500 L 0 500 Z" fill="#3a7c2c" opacity="0.5"/>
+                <path d="M0 420 Q 200 380 400 420 L 400 500 L 0 500 Z" fill="#274f20" opacity="0.7"/>
+              </svg>
+              <div class="gallery__overlay">
+                <div>
+                  <span class="gallery__overlay-title">Sunrise at Gaushala</span>
+                  <span class="gallery__overlay-sub">Vrindavan, Uttar Pradesh</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="gallery__item" role="listitem">
+              <svg viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <defs><linearGradient id="g2" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#c8e5be"/><stop offset="100%" stop-color="#4a9a38"/></linearGradient></defs>
+                <rect width="400" height="250" fill="url(#g2)"/>
+                <circle cx="120" cy="130" r="40" fill="#fff" opacity="0.5"/>
+                <circle cx="280" cy="150" r="30" fill="#fff" opacity="0.4"/>
+              </svg>
+              <div class="gallery__overlay">
+                <div>
+                  <span class="gallery__overlay-title">Fodder Drive</span>
+                  <span class="gallery__overlay-sub">Rajasthan</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="gallery__item gallery__item--wide" role="listitem">
+              <svg viewBox="0 0 800 250" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <defs><linearGradient id="g3" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#f5821f"/><stop offset="100%" stop-color="#d96512"/></linearGradient></defs>
+                <rect width="800" height="250" fill="url(#g3)"/>
+                <text x="400" y="145" text-anchor="middle" font-size="90" fill="#fff" opacity="0.35" font-family="serif" font-weight="bold">ॐ</text>
+              </svg>
+              <div class="gallery__overlay">
+                <div>
+                  <span class="gallery__overlay-title">Community Satsang</span>
+                  <span class="gallery__overlay-sub">Rishikesh, Uttarakhand</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="gallery__item" role="listitem">
+              <svg viewBox="0 0 400 250" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <defs><linearGradient id="g4" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#aeeae1"/><stop offset="100%" stop-color="#24a396"/></linearGradient></defs>
+                <rect width="400" height="250" fill="url(#g4)"/>
+                <path d="M0 180 Q 200 140 400 180 L 400 250 L 0 250 Z" fill="#18534f" opacity="0.6"/>
+              </svg>
+              <div class="gallery__overlay">
+                <div>
+                  <span class="gallery__overlay-title">Village Outreach</span>
+                  <span class="gallery__overlay-sub">Karnataka</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="gallery__item gallery__item--tall" role="listitem">
+              <svg viewBox="0 0 400 500" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <defs><linearGradient id="g5" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#fff3d9"/><stop offset="100%" stop-color="#ff9f37"/></linearGradient></defs>
+                <rect width="400" height="500" fill="url(#g5)"/>
+                <g transform="translate(200 260)" fill="none" stroke="#b44d10" stroke-width="3" opacity="0.5">
+                  <circle r="110"/><circle r="80"/><circle r="50"/>
+                </g>
+              </svg>
+              <div class="gallery__overlay">
+                <div>
+                  <span class="gallery__overlay-title">Kartik Poornima</span>
+                  <span class="gallery__overlay-sub">Mathura, UP</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="gallery__item gallery__item--wide" role="listitem">
+              <svg viewBox="0 0 800 250" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <defs><linearGradient id="g6" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#4a9a38"/><stop offset="100%" stop-color="#274f20"/></linearGradient></defs>
+                <rect width="800" height="250" fill="url(#g6)"/>
+                <path d="M0 100 L 800 100 M 0 150 L 800 150 M 0 200 L 800 200" stroke="#fff" stroke-width="1" opacity="0.15"/>
+              </svg>
+              <div class="gallery__overlay">
+                <div>
+                  <span class="gallery__overlay-title">Natural Farm</span>
+                  <span class="gallery__overlay-sub">Anand, Gujarat</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery__all">
+            <a href="pages/gallery.html" class="home-btn home-btn--ghost" data-testid="view-gallery-btn">
+              View Gallery
+              <svg class="icon" viewBox="0 0 24 24"><path d="M5 12h14M13 5l7 7-7 7"></path></svg>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- =============================================
+           11. VOLUNTEER CTA
+           ============================================= -->
+      <section class="home-section volunteer-cta" id="volunteer-cta" aria-labelledby="vc-title">
+        <div class="volunteer-cta__box" data-animate="scale">
+          <div class="volunteer-cta__grid">
+            <div>
+              <span class="home-section__eyebrow" style="background: rgb(255 255 255 / 0.1); border-color: rgb(255 255 255 / 0.2); color: #ffdba8;">
+                <span class="dot" style="background: #ffdba8;"></span>Join the Movement
+              </span>
+              <h2 id="vc-title" style="margin-top: var(--space-4);">Be the hand that <span class="accent">serves Gau Mata</span> in your district.</h2>
+              <p>Whether you can offer 2 hours a week or your specialised skill, our district-led programs turn intent into meaningful, on-ground impact.</p>
+              <div class="volunteer-cta__actions">
+                <a href="pages/volunteer.html" class="home-btn home-btn--primary" data-testid="volunteer-cta-btn">
+                  <svg class="icon" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle></svg>
+                  Become a Volunteer
+                </a>
+                <a href="pages/about.html" class="home-btn home-btn--ghost">Read Our Story</a>
+              </div>
+            </div>
+            <div class="volunteer-cta__visual" aria-hidden="true">
+              <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+                <g transform="translate(200 200)" fill="none">
+                  <circle r="150" stroke="rgb(255 255 255 / 0.12)" stroke-width="1.5"/>
+                  <circle r="110" stroke="rgb(255 255 255 / 0.16)" stroke-width="1.5"/>
+                  <circle r="70" stroke="rgb(255 255 255 / 0.24)" stroke-width="1.5"/>
+                  <g fill="#ffdba8">
+                    <circle cx="0" cy="-140" r="8"/>
+                    <circle cx="99" cy="-99" r="6"/>
+                    <circle cx="140" cy="0" r="8"/>
+                    <circle cx="99" cy="99" r="6"/>
+                    <circle cx="0" cy="140" r="8"/>
+                    <circle cx="-99" cy="99" r="6"/>
+                    <circle cx="-140" cy="0" r="8"/>
+                    <circle cx="-99" cy="-99" r="6"/>
+                  </g>
+                </g>
+                <g transform="translate(200 200)" fill="#fff">
+                  <circle r="42" opacity="0.15"/>
+                  <circle r="28" opacity="0.25"/>
+                  <path d="M-14 -6 Q 0 -22 14 -6 Q 14 8 0 20 Q -14 8 -14 -6 Z" fill="#f5821f"/>
+                </g>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =============================================
+           12. FAQ
+           ============================================= -->
+      <section class="home-section" id="faq" aria-labelledby="faq-title">
+        <div class="home-section__head" data-animate="fade-up">
+          <span class="home-section__eyebrow"><span class="dot"></span>FAQ</span>
+          <h2 class="home-section__title" id="faq-title">Frequently Asked <span class="accent">Questions</span></h2>
+          <p class="home-section__lede">Answers to the questions we hear most often from citizens and volunteers.</p>
+        </div>
+
+        <div class="faq__wrap">
+          <div class="faq__list" data-animate="fade-up">
+            <details class="faq__item">
+              <summary class="faq__q">
+                <span>What exactly does GauRakshak Bharat do?</span>
+                <span class="faq__toggle" aria-hidden="true">
+                  <svg class="icon" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"></path></svg>
+                </span>
+              </summary>
+              <div class="faq__a">
+                We are a citizen-led organisation working on cow protection, gaushala support, awareness and education. Our activities include lawful rescue coordination, natural-farming training, community satsangs, and providing infrastructure and medical aid to shelters across Bharat.
+              </div>
+            </details>
+
+            <details class="faq__item">
+              <summary class="faq__q">
+                <span>How can I become a volunteer?</span>
+                <span class="faq__toggle" aria-hidden="true">
+                  <svg class="icon" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"></path></svg>
+                </span>
+              </summary>
+              <div class="faq__a">
+                Visit our Volunteer page and complete the short application form. Our district coordinators will reach out within 3 working days with an onboarding call, a code-of-conduct briefing and role options that match your availability and skills.
+              </div>
+            </details>
+
+            <details class="faq__item">
+              <summary class="faq__q">
+                <span>How do I report a cow in distress?</span>
+                <span class="faq__toggle" aria-hidden="true">
+                  <svg class="icon" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"></path></svg>
+                </span>
+              </summary>
+              <div class="faq__a">
+                Use the "Report Concern" button in the navigation to submit details, location and photos. Our 24/7 helpline routes the case to the nearest volunteer team who coordinate with local authorities and veterinary services.
+              </div>
+            </details>
+
+            <details class="faq__item">
+              <summary class="faq__q">
+                <span>Are donations tax-deductible?</span>
+                <span class="faq__toggle" aria-hidden="true">
+                  <svg class="icon" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"></path></svg>
+                </span>
+              </summary>
+              <div class="faq__a">
+                Yes. Contributions to registered gaushala partners are eligible for 80G tax exemption under the Income Tax Act. You will receive an official receipt on your registered email within 48 hours of your donation.
+              </div>
+            </details>
+
+            <details class="faq__item">
+              <summary class="faq__q">
+                <span>Is your work lawful and non-violent?</span>
+                <span class="faq__toggle" aria-hidden="true">
+                  <svg class="icon" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"></path></svg>
+                </span>
+              </summary>
+              <div class="faq__a">
+                Absolutely. Our code of conduct is built on ahimsa and constitutional dharma. All rescues are conducted with state authorities and licensed veterinarians. Volunteers who violate this principle are removed immediately.
+              </div>
+            </details>
+
+            <details class="faq__item">
+              <summary class="faq__q">
+                <span>Can I contribute without physically volunteering?</span>
+                <span class="faq__toggle" aria-hidden="true">
+                  <svg class="icon" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"></path></svg>
+                </span>
+              </summary>
+              <div class="faq__a">
+                Yes — you can help through donations, spreading awareness on social media, translating our content into regional languages, or offering professional skills (design, legal, medical, tech) remotely through our Skill Volunteer program.
+              </div>
+            </details>
+          </div>
+
+          <div class="faq__foot">
+            <p>Still have a question? We'd love to hear from you.</p>
+            <a href="pages/contact.html" class="home-btn home-btn--ghost">
+              Contact Our Team
+              <svg class="icon" viewBox="0 0 24 24"><path d="M5 12h14M13 5l7 7-7 7"></path></svg>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- =============================================
+           13. FINAL CALL TO ACTION
+           ============================================= -->
+      <section class="final-cta" id="final-cta" aria-labelledby="fc-title">
+        <div class="final-cta__inner" data-animate="fade-up">
+          <span class="home-section__eyebrow"><span class="dot"></span>Every Action Counts</span>
+          <h2 id="fc-title" style="margin-top: var(--space-5);">Together, let's protect what makes <span class="accent">Bharat sacred.</span></h2>
+          <p>Whether you volunteer an hour, report a case, or share our mission — your action strengthens a nation that honours its cows, its farmers and its dharma.</p>
+          <div class="final-cta__actions">
+            <a href="pages/volunteer.html" class="home-btn home-btn--primary ripple-container" data-testid="final-volunteer-btn">
+              <svg class="icon" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle></svg>
+              Become a Volunteer
+            </a>
+            <a href="pages/report.html" class="home-btn home-btn--secondary" data-testid="final-report-btn">
+              <svg class="icon" viewBox="0 0 24 24"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path><path d="M12 8v4M12 16h.01"></path></svg>
+              Report a Concern
+            </a>
+          </div>
+          <p class="final-cta__note">॥ सर्वे भवन्तु सुखिनः ॥ &nbsp;·&nbsp; May all beings be happy</p>
+        </div>
       </section>
 
     </main>
