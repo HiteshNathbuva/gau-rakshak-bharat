@@ -3,16 +3,40 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Volunteer — GauRakshak Bharat</title>
-  <meta name="description" content="Volunteer with GauRakshak Bharat — join our network of compassionate supporters for cow protection and community service.">
+
+  <!-- Primary SEO -->
+  <title>Volunteer — GauRakshak Bharat | Serve Gau Mata, Serve Bharat</title>
+  <meta name="description" content="Join GauRakshak Bharat as a volunteer — protect cows, serve society, preserve culture and drive real ecological impact. Field, digital, campus and content roles available.">
+  <meta name="keywords" content="volunteer for cow protection, gau seva, NGO volunteer India, student ambassador Bharat, digital volunteer, gaushala seva">
+  <meta name="author" content="GauRakshak Bharat">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://gaurakshakbharat.org/pages/volunteer.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Volunteer — GauRakshak Bharat">
+  <meta property="og:description" content="Join the citizen-led movement to protect Gau Mata. Multiple volunteer roles across Bharat.">
+  <meta property="og:url" content="https://gaurakshakbharat.org/pages/volunteer.html">
+  <meta property="og:site_name" content="GauRakshak Bharat">
+  <meta property="og:locale" content="en_IN">
+
   <link rel="icon" type="image/x-icon" href="../assets/icons/favicon.ico">
+  <link rel="apple-touch-icon" href="../assets/icons/apple-touch-icon.png">
   <meta name="theme-color" content="#4a9a38">
+
+  <!-- Fonts (match navbar) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap">
+
+  <!-- Stylesheets — dependency order -->
   <link rel="stylesheet" href="../css/variables.css">
   <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="../css/animations.css">
   <link rel="stylesheet" href="../css/responsive.css">
+  <link rel="stylesheet" href="../css/knowledge.css">
+  <link rel="stylesheet" href="../css/volunteer.css">
+  <link rel="stylesheet" href="../css/footer.css">
 </head>
 <body>
 
@@ -24,9 +48,8 @@
   <div class="page-wrapper">
 
     <!-- =============================================
-         HOMEPAGE NAVIGATION
+         NAVIGATION (unchanged — same as homepage)
          ============================================= -->
-
     <header class="navbar" role="banner">
       <div class="container navbar__shell">
         <div class="navbar__inner">
@@ -43,9 +66,9 @@
             </span>
           </button>
 
-        <a href="../index.html" class="navbar__brand" aria-label="GauRakshak Bharat — Home">
-          <img src="../assets/icons/Mainlogo.png" alt="GauRakshak Bharat" class="navbar__logo">
-        </a>
+          <a href="../index.html" class="navbar__brand" aria-label="GauRakshak Bharat — Home">
+            <img src="../assets/icons/Mainlogo.png" alt="GauRakshak Bharat" class="navbar__logo">
+          </a>
 
           <nav class="navbar__nav" id="main-nav" role="navigation" aria-label="Main navigation">
             <a href="../index.html" class="navbar__link">Home</a>
@@ -62,7 +85,7 @@
                 <path d="m6 9 6 6 6-6"></path>
               </svg>
             </a>
-            <a href="volunteer.html" class="navbar__link">Volunteer</a>
+            <a href="volunteer.html" class="navbar__link is-active">Volunteer</a>
             <div class="navbar__item navbar__item--dropdown">
               <button class="navbar__link navbar__link--button navbar__link--has-icon" type="button" aria-expanded="false" aria-haspopup="true">
                 More
@@ -134,11 +157,11 @@
         <div class="navbar__mobile-panel" id="mobile-nav" aria-hidden="true">
           <div class="mobile-menu">
             <nav class="mobile-menu__primary" aria-label="Mobile navigation">
-              <a href="../index.html" class="mobile-menu__link is-active"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2h-4v-7H9v7H5a2 2 0 0 1-2-2z"></path></svg>Home</a>
+              <a href="../index.html" class="mobile-menu__link"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2h-4v-7H9v7H5a2 2 0 0 1-2-2z"></path></svg>Home</a>
               <a href="about.html" class="mobile-menu__link"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>About</a>
               <a href="knowledge.html" class="mobile-menu__link"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M4 4.5A2.5 2.5 0 0 1 6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5z"></path></svg>Knowledge Hub</a>
               <a href="community.html" class="mobile-menu__link"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"></path></svg>Community</a>
-              <a href="volunteer.html" class="mobile-menu__link"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M11 14h2a2 2 0 1 0 0-4h-3c-.6 0-1.1.2-1.5.6L3 16"></path><path d="m7 20 1.6-1.4c.4-.4.9-.6 1.5-.6H14c.6 0 1.1-.2 1.5-.6l5.5-5.4"></path><path d="m2 15 6 6"></path></svg>Volunteer</a>
+              <a href="volunteer.html" class="mobile-menu__link is-active"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M11 14h2a2 2 0 1 0 0-4h-3c-.6 0-1.1.2-1.5.6L3 16"></path><path d="m7 20 1.6-1.4c.4-.4.9-.6 1.5-.6H14c.6 0 1.1-.2 1.5-.6l5.5-5.4"></path><path d="m2 15 6 6"></path></svg>Volunteer</a>
               <a href="contact.html" class="mobile-menu__link"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m22 7-10 6L2 7"></path></svg>Contact</a>
             </nav>
 
@@ -166,14 +189,775 @@
       </div>
     </header>
 
-    <main id="main-content" class="main-content" role="main">
-      <section class="section section--placeholder" aria-label="Volunteer page content placeholder" data-placeholder-label="Volunteer Network — Content Coming Soon"></section>
+    <!-- =============================================
+         MAIN VOLUNTEER CONTENT
+         ============================================= -->
+    <main id="main-content" class="main-content vlt-page" role="main">
+
+      <!-- 1. HERO -->
+      <section class="vlt-hero" aria-labelledby="vlt-hero-title">
+        <div class="vlt-hero__inner">
+          <div data-animate="fade-up">
+            <nav class="vlt-hero__breadcrumb" aria-label="Breadcrumb">
+              <a href="../index.html">Home</a>
+              <span class="sep" aria-hidden="true">›</span>
+              <span class="current">Volunteer</span>
+            </nav>
+
+            <span class="vlt-eyebrow">
+              <span class="dot" aria-hidden="true"></span>
+              Become a Volunteer
+            </span>
+
+            <h1 id="vlt-hero-title" class="vlt-hero__title">
+              Lend your hands to
+              <span class="accent">Gau Mata & Bharat</span>
+            </h1>
+
+            <p class="vlt-hero__lede">
+              Whether you have two hours a week or two hands ready to serve full-time —
+              your effort can rescue a cow, teach a child, revive a village, and heal the
+              soul of Bharat. Join <strong>1000+ trained citizens</strong> already on the ground.
+            </p>
+
+            <div class="vlt-hero__stats" aria-label="Impact quick stats">
+              <div class="vlt-hero__stat">
+                <span class="vlt-hero__stat-num">1000+</span>
+                <span class="vlt-hero__stat-label">Active Volunteers</span>
+              </div>
+              <div class="vlt-hero__stat">
+                <span class="vlt-hero__stat-num">28</span>
+                <span class="vlt-hero__stat-label">States Covered</span>
+              </div>
+              <div class="vlt-hero__stat">
+                <span class="vlt-hero__stat-num">140+</span>
+                <span class="vlt-hero__stat-label">Partner Gaushalas</span>
+              </div>
+            </div>
+
+            <div class="vlt-hero__actions">
+              <a href="#vlt-cta" class="vlt-btn vlt-btn--primary" data-testid="vlt-hero-join">
+                <svg class="vlt-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                Become a Volunteer
+              </a>
+              <a href="#vlt-roles" class="vlt-btn vlt-btn--ghost" data-testid="vlt-hero-roles">
+                Explore Roles
+                <svg class="vlt-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"></path></svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="vlt-hero__visual" data-animate="fade-left" aria-hidden="true">
+            <div class="vlt-hero__illustration">
+              <svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <linearGradient id="vlt-sky" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#fff3d9"/>
+                    <stop offset="100%" stop-color="#ffe4b3"/>
+                  </linearGradient>
+                  <linearGradient id="vlt-ground" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#c8e5be"/>
+                    <stop offset="100%" stop-color="#9fd18f"/>
+                  </linearGradient>
+                  <radialGradient id="vlt-sun" cx="50%" cy="50%" r="50%">
+                    <stop offset="0%" stop-color="#ffd97a"/>
+                    <stop offset="100%" stop-color="#f5821f"/>
+                  </radialGradient>
+                </defs>
+
+                <rect width="500" height="320" fill="url(#vlt-sky)"/>
+                <circle cx="110" cy="110" r="46" fill="url(#vlt-sun)" opacity="0.9"/>
+                <circle cx="110" cy="110" r="72" fill="#f5821f" opacity="0.1"/>
+
+                <!-- Mandala backdrop -->
+                <g transform="translate(360 190)" fill="none" stroke="#3a7c2c" stroke-width="1" opacity="0.3">
+                  <circle r="90"/>
+                  <circle r="60"/>
+                  <circle r="30"/>
+                </g>
+
+                <!-- Hills -->
+                <path d="M0 300 Q 120 220 240 280 T 500 260 L 500 340 L 0 340 Z" fill="#4a9a38" opacity="0.35"/>
+                <path d="M0 320 Q 140 260 280 300 T 500 290 L 500 360 L 0 360 Z" fill="#3a7c2c" opacity="0.55"/>
+
+                <rect y="320" width="500" height="180" fill="url(#vlt-ground)"/>
+
+                <!-- Trees -->
+                <g opacity="0.85">
+                  <circle cx="60" cy="292" r="24" fill="#2f6325"/>
+                  <rect x="57" y="302" width="7" height="28" fill="#7a5030"/>
+                  <circle cx="450" cy="298" r="22" fill="#3a7c2c"/>
+                  <rect x="447" y="308" width="6" height="24" fill="#7a5030"/>
+                </g>
+
+                <!-- Cow (right) -->
+                <g transform="translate(280 230)">
+                  <ellipse cx="80" cy="85" rx="82" ry="42" fill="#ffffff" stroke="#c9a878" stroke-width="2"/>
+                  <path d="M30 65 Q 65 45 100 68 Q 130 55 160 70 Q 145 90 100 92 Q 60 90 30 78 Z" fill="#8b4513" opacity="0.85"/>
+                  <rect x="30" y="115" width="11" height="42" rx="3" fill="#e8d5b7" stroke="#c9a878" stroke-width="1.5"/>
+                  <rect x="62" y="118" width="11" height="42" rx="3" fill="#e8d5b7" stroke="#c9a878" stroke-width="1.5"/>
+                  <rect x="98" y="118" width="11" height="42" rx="3" fill="#e8d5b7" stroke="#c9a878" stroke-width="1.5"/>
+                  <rect x="128" y="115" width="11" height="42" rx="3" fill="#e8d5b7" stroke="#c9a878" stroke-width="1.5"/>
+                  <ellipse cx="18" cy="62" rx="30" ry="24" fill="#ffffff" stroke="#c9a878" stroke-width="2"/>
+                  <ellipse cx="0" cy="72" rx="14" ry="10" fill="#f5c8a0" stroke="#c9a878" stroke-width="1.5"/>
+                  <circle cx="-5" cy="70" r="1.6" fill="#4a2c15"/>
+                  <circle cx="4" cy="70" r="1.6" fill="#4a2c15"/>
+                  <ellipse cx="22" cy="55" rx="3" ry="4" fill="#2c1810"/>
+                  <path d="M40 50 Q 52 34 48 26" stroke="#d4b896" stroke-width="4" fill="none" stroke-linecap="round"/>
+                  <path d="M12 46 Q 4 30 8 22" stroke="#d4b896" stroke-width="4" fill="none" stroke-linecap="round"/>
+                  <path d="M15 51 L 15 61 M11 55 L 19 55" stroke="#f5821f" stroke-width="2" stroke-linecap="round"/>
+                </g>
+
+                <!-- Volunteer 1 -->
+                <g transform="translate(140 250)">
+                  <circle cx="0" cy="0" r="14" fill="#f5c8a0" stroke="#c9a878" stroke-width="1.5"/>
+                  <path d="M-16 -8 Q 0 -20 16 -8 L 16 -2 L -16 -2 Z" fill="#f5821f"/>
+                  <rect x="-18" y="14" width="36" height="52" rx="6" fill="#4a9a38"/>
+                  <rect x="-18" y="66" width="10" height="30" rx="2" fill="#3a2318"/>
+                  <rect x="8" y="66" width="10" height="30" rx="2" fill="#3a2318"/>
+                  <!-- Extended arm to cow -->
+                  <path d="M18 22 Q 40 12 68 20" stroke="#f5c8a0" stroke-width="10" stroke-linecap="round" fill="none"/>
+                  <path d="M-18 22 Q -30 30 -32 42" stroke="#f5c8a0" stroke-width="10" stroke-linecap="round" fill="none"/>
+                </g>
+
+                <!-- Heart floaters -->
+                <g opacity="0.9">
+                  <path d="M235 175 c 0 -6 -8 -10 -12 -4 c -4 -6 -12 -2 -12 4 c 0 8 12 16 12 16 s 12 -8 12 -16 z" fill="#e63946"/>
+                  <path d="M310 130 c 0 -4 -6 -7 -8 -3 c -2 -4 -8 -1 -8 3 c 0 5 8 10 8 10 s 8 -5 8 -10 z" fill="#f5821f" opacity="0.9"/>
+                </g>
+
+                <!-- Lotus flowers -->
+                <g transform="translate(55 402)" opacity="0.9">
+                  <ellipse cx="0" cy="0" rx="14" ry="6" fill="#ffb7c5" transform="rotate(-30)"/>
+                  <ellipse cx="0" cy="0" rx="14" ry="6" fill="#ff9ab4" transform="rotate(30)"/>
+                  <ellipse cx="0" cy="0" rx="14" ry="6" fill="#ffc9d6"/>
+                  <circle cx="0" cy="0" r="4" fill="#f5c034"/>
+                </g>
+                <g transform="translate(430 408)" opacity="0.9">
+                  <ellipse cx="0" cy="0" rx="10" ry="4" fill="#ffb7c5" transform="rotate(-30)"/>
+                  <ellipse cx="0" cy="0" rx="10" ry="4" fill="#ff9ab4" transform="rotate(30)"/>
+                  <ellipse cx="0" cy="0" rx="10" ry="4" fill="#ffc9d6"/>
+                  <circle cx="0" cy="0" r="3" fill="#f5c034"/>
+                </g>
+
+                <!-- Grass -->
+                <g stroke="#2f6325" stroke-width="2" stroke-linecap="round" opacity="0.55">
+                  <path d="M30 470 L 30 455 M35 470 L 38 455 M25 470 L 22 456"/>
+                  <path d="M470 465 L 470 450 M475 465 L 478 450 M465 465 L 462 451"/>
+                  <path d="M240 480 L 240 465 M245 480 L 248 465 M235 480 L 232 466"/>
+                </g>
+              </svg>
+            </div>
+
+            <div class="vlt-hero__floater vlt-hero__floater--tl">
+              <svg class="vlt-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path><path d="m9 12 2 2 4-4"></path></svg>
+              Verified Program
+            </div>
+
+            <div class="vlt-hero__floater vlt-hero__floater--br">
+              <svg class="vlt-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+              1000+ Volunteers
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 2. WHY VOLUNTEER -->
+      <section class="vlt-section vlt-section--subtle" aria-labelledby="vlt-why-title">
+        <div class="vlt-head" data-animate="fade-up">
+          <span class="vlt-eyebrow"><span class="dot" aria-hidden="true"></span>Why Volunteer</span>
+          <h2 id="vlt-why-title" class="vlt-head__title">Four reasons your <span class="accent">seva matters</span></h2>
+          <p class="vlt-head__lede">
+            Every hour you give ripples outward — protecting a cow, uplifting a community,
+            reviving a heritage, and healing the earth beneath our feet.
+          </p>
+        </div>
+
+        <div class="vlt-why__grid" data-stagger>
+          <article class="vlt-why-card vlt-why-card--protect" data-animate="fade-up">
+            <div class="vlt-why-card__icon" aria-hidden="true">
+              <svg class="vlt-icon" viewBox="0 0 24 24"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path><path d="m9 12 2 2 4-4"></path></svg>
+            </div>
+            <h3>Protect Cows</h3>
+            <p>Join lawful rescue operations, provide fodder, medical camps and safe shelter to abandoned Gau Mata across Bharat.</p>
+          </article>
+
+          <article class="vlt-why-card vlt-why-card--serve" data-animate="fade-up">
+            <div class="vlt-why-card__icon" aria-hidden="true">
+              <svg class="vlt-icon" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+            </div>
+            <h3>Serve Society</h3>
+            <p>Empower farmers, teach schoolchildren, coordinate satsangs — turn compassion into measurable ground-level impact.</p>
+          </article>
+
+          <article class="vlt-why-card vlt-why-card--culture" data-animate="fade-up">
+            <div class="vlt-why-card__icon" aria-hidden="true">
+              <svg class="vlt-icon" viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M4 4.5A2.5 2.5 0 0 1 6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5z"></path></svg>
+            </div>
+            <h3>Preserve Culture</h3>
+            <p>Keep Sanatan wisdom, Vedic teachings and the sacred bond between Bharat and Gau Mata alive for future generations.</p>
+          </article>
+
+          <article class="vlt-why-card vlt-why-card--eco" data-animate="fade-up">
+            <div class="vlt-why-card__icon" aria-hidden="true">
+              <svg class="vlt-icon" viewBox="0 0 24 24"><path d="M11 20A7 7 0 0 1 4 13c0-7 9-11 16-11 0 7-4 16-11 16Z"></path><path d="M6 18c2-4 5-7 10-9"></path></svg>
+            </div>
+            <h3>Environmental Impact</h3>
+            <p>Champion panchagavya, natural farming and indigenous breeds — heal soil, cut chemicals and shrink Bharat's carbon footprint.</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- 3. VOLUNTEER OPPORTUNITIES -->
+      <section id="vlt-roles" class="vlt-section" aria-labelledby="vlt-roles-title">
+        <div class="vlt-head" data-animate="fade-up">
+          <span class="vlt-eyebrow vlt-eyebrow--saffron"><span class="dot" aria-hidden="true"></span>Opportunities</span>
+          <h2 id="vlt-roles-title" class="vlt-head__title">Find the role that <span class="accent">matches your seva</span></h2>
+          <p class="vlt-head__lede">
+            From boots-on-the-ground rescue to digital storytelling — six meaningful paths
+            for every skill, schedule and calling.
+          </p>
+        </div>
+
+        <div class="vlt-roles__grid" data-stagger>
+          <article class="vlt-role-card vlt-role-card--field" data-animate="fade-up">
+            <div class="vlt-role-card__icon" aria-hidden="true">
+              <svg class="vlt-icon" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            </div>
+            <div class="vlt-role-card__body">
+              <h3 class="vlt-role-card__title">Field Volunteer</h3>
+              <p class="vlt-role-card__text">Join district chapters for rescue missions, fodder drives, gaushala visits and lawful ground coordination.</p>
+              <div class="vlt-role-card__tags">
+                <span class="vlt-role-card__tag">On-ground</span>
+                <span class="vlt-role-card__tag">Weekend</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="vlt-role-card vlt-role-card--event" data-animate="fade-up">
+            <div class="vlt-role-card__icon" aria-hidden="true">
+              <svg class="vlt-icon" viewBox="0 0 24 24"><path d="M8 2v4M16 2v4M3 10h18"></path><rect x="3" y="4" width="18" height="18" rx="2"></rect></svg>
+            </div>
+            <div class="vlt-role-card__body">
+              <h3 class="vlt-role-card__title">Event Volunteer</h3>
+              <p class="vlt-role-card__text">Organise satsangs, workshops, gau puja events and community melas — from local gatherings to state-level conclaves.</p>
+              <div class="vlt-role-card__tags">
+                <span class="vlt-role-card__tag">Events</span>
+                <span class="vlt-role-card__tag">Coordination</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="vlt-role-card vlt-role-card--digital" data-animate="fade-up">
+            <div class="vlt-role-card__icon" aria-hidden="true">
+              <svg class="vlt-icon" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"></rect><path d="M8 21h8M12 17v4"></path></svg>
+            </div>
+            <div class="vlt-role-card__body">
+              <h3 class="vlt-role-card__title">Digital Volunteer</h3>
+              <p class="vlt-role-card__text">Help remotely — social media, translations, website, design, tech support. Contribute from anywhere in Bharat.</p>
+              <div class="vlt-role-card__tags">
+                <span class="vlt-role-card__tag">Remote</span>
+                <span class="vlt-role-card__tag">Flexible</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="vlt-role-card vlt-role-card--content" data-animate="fade-up">
+            <div class="vlt-role-card__icon" aria-hidden="true">
+              <svg class="vlt-icon" viewBox="0 0 24 24"><path d="M12 20h9M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4 12.5-12.5z"></path></svg>
+            </div>
+            <div class="vlt-role-card__body">
+              <h3 class="vlt-role-card__title">Content Creator</h3>
+              <p class="vlt-role-card__text">Write articles, shoot videos, capture stories and design visuals that carry Gau Seva into every home of Bharat.</p>
+              <div class="vlt-role-card__tags">
+                <span class="vlt-role-card__tag">Writing</span>
+                <span class="vlt-role-card__tag">Video</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="vlt-role-card vlt-role-card--awareness" data-animate="fade-up">
+            <div class="vlt-role-card__icon" aria-hidden="true">
+              <svg class="vlt-icon" viewBox="0 0 24 24"><path d="M3 11 22 2l-9 19-2-8z"></path><path d="M3 11 11 13"></path></svg>
+            </div>
+            <div class="vlt-role-card__body">
+              <h3 class="vlt-role-card__title">Awareness Campaign</h3>
+              <p class="vlt-role-card__text">Lead street awareness drives, poster campaigns, rural outreach and youth engagement across your district.</p>
+              <div class="vlt-role-card__tags">
+                <span class="vlt-role-card__tag">Outreach</span>
+                <span class="vlt-role-card__tag">Public Speaking</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="vlt-role-card vlt-role-card--student" data-animate="fade-up">
+            <div class="vlt-role-card__icon" aria-hidden="true">
+              <svg class="vlt-icon" viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c0 1.7 3 3 6 3s6-1.3 6-3v-5"></path></svg>
+            </div>
+            <div class="vlt-role-card__body">
+              <h3 class="vlt-role-card__title">Student Ambassador</h3>
+              <p class="vlt-role-card__text">Lead a Gau Seva chapter at your college — organise talks, quizzes and campus drives with mentor support.</p>
+              <div class="vlt-role-card__tags">
+                <span class="vlt-role-card__tag">Campus</span>
+                <span class="vlt-role-card__tag">Leadership</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- 4. VOLUNTEER JOURNEY -->
+      <section class="vlt-section vlt-section--subtle" aria-labelledby="vlt-journey-title">
+        <div class="vlt-head" data-animate="fade-up">
+          <span class="vlt-eyebrow"><span class="dot" aria-hidden="true"></span>Your Journey</span>
+          <h2 id="vlt-journey-title" class="vlt-head__title">Five steps to <span class="accent">start your seva</span></h2>
+          <p class="vlt-head__lede">
+            A simple, transparent onboarding path — designed to prepare you well and match your
+            calling with the right role.
+          </p>
+        </div>
+
+        <ol class="vlt-journey" aria-label="Volunteer onboarding steps" data-stagger>
+          <li class="vlt-journey__step" data-animate="fade-up">
+            <div class="vlt-journey__dot" aria-hidden="true">
+              <svg class="vlt-icon" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle><path d="M19 8v6M22 11h-6"></path></svg>
+            </div>
+            <span class="vlt-journey__num">Step 01</span>
+            <h4>Register</h4>
+            <p>Fill a quick 2-minute form with your interests, location and availability.</p>
+          </li>
+
+          <li class="vlt-journey__step" data-animate="fade-up">
+            <div class="vlt-journey__dot" aria-hidden="true">
+              <svg class="vlt-icon" viewBox="0 0 24 24"><path d="M9 11l3 3L22 4"></path><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg>
+            </div>
+            <span class="vlt-journey__num">Step 02</span>
+            <h4>Application Review</h4>
+            <p>Our district coordinator reviews your profile and reaches out within 48 hours.</p>
+          </li>
+
+          <li class="vlt-journey__step" data-animate="fade-up">
+            <div class="vlt-journey__dot" aria-hidden="true">
+              <svg class="vlt-icon" viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M4 4.5A2.5 2.5 0 0 1 6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5z"></path></svg>
+            </div>
+            <span class="vlt-journey__num">Step 03</span>
+            <h4>Training</h4>
+            <p>Attend orientation, role-based training modules, and safety &amp; ethics briefing.</p>
+          </li>
+
+          <li class="vlt-journey__step" data-animate="fade-up">
+            <div class="vlt-journey__dot" aria-hidden="true">
+              <svg class="vlt-icon" viewBox="0 0 24 24"><path d="M12 2L3 7v6c0 5 3.5 9.5 9 11 5.5-1.5 9-6 9-11V7z"></path><path d="m9 12 2 2 4-4"></path></svg>
+            </div>
+            <span class="vlt-journey__num">Step 04</span>
+            <h4>Verification</h4>
+            <p>Complete ID verification and receive your official GauRakshak Bharat volunteer ID.</p>
+          </li>
+
+          <li class="vlt-journey__step" data-animate="fade-up">
+            <div class="vlt-journey__dot" aria-hidden="true">
+              <svg class="vlt-icon" viewBox="0 0 24 24"><path d="M13 2 3 14h9l-1 8 10-12h-9z"></path></svg>
+            </div>
+            <span class="vlt-journey__num">Step 05</span>
+            <h4>Start Volunteering</h4>
+            <p>Get matched to missions and start serving Gau Mata with a mentor by your side.</p>
+          </li>
+        </ol>
+      </section>
+
+      <!-- 5. BENEFITS -->
+      <section class="vlt-section" aria-labelledby="vlt-benefits-title">
+        <div class="vlt-head" data-animate="fade-up">
+          <span class="vlt-eyebrow vlt-eyebrow--saffron"><span class="dot" aria-hidden="true"></span>What You Gain</span>
+          <h2 id="vlt-benefits-title" class="vlt-head__title">More than seva — <span class="accent">a lifetime of growth</span></h2>
+          <p class="vlt-head__lede">
+            Beyond the sacred merit of Gau Seva, every volunteer walks away with tangible
+            skills, real recognition and a community for life.
+          </p>
+        </div>
+
+        <div class="vlt-benefits__grid" data-stagger>
+          <div class="vlt-benefit" data-animate="fade-up">
+            <div class="vlt-benefit__icon" aria-hidden="true">
+              <svg class="vlt-icon" viewBox="0 0 24 24"><path d="M4 4h16v12H4z"></path><path d="M8 20h8M12 16v4M9 8l2 2 4-4"></path></svg>
+            </div>
+            <h3>Certificate</h3>
+            <p>Official volunteer certificate co-signed by our council — recognised across NGO networks.</p>
+          </div>
+
+          <div class="vlt-benefit" data-animate="fade-up">
+            <div class="vlt-benefit__icon" aria-hidden="true">
+              <svg class="vlt-icon" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+            </div>
+            <h3>Community</h3>
+            <p>Join a nationwide fellowship of like-minded citizens, scholars, farmers and youth leaders.</p>
+          </div>
+
+          <div class="vlt-benefit" data-animate="fade-up">
+            <div class="vlt-benefit__icon" aria-hidden="true">
+              <svg class="vlt-icon" viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c0 1.7 3 3 6 3s6-1.3 6-3v-5"></path></svg>
+            </div>
+            <h3>Skill Development</h3>
+            <p>Free training in leadership, communication, natural farming, first aid and event management.</p>
+          </div>
+
+          <div class="vlt-benefit" data-animate="fade-up">
+            <div class="vlt-benefit__icon" aria-hidden="true">
+              <svg class="vlt-icon" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+            </div>
+            <h3>Social Impact</h3>
+            <p>See your hours convert to real cows rescued, farmers trained and villages transformed.</p>
+          </div>
+
+          <div class="vlt-benefit" data-animate="fade-up">
+            <div class="vlt-benefit__icon" aria-hidden="true">
+              <svg class="vlt-icon" viewBox="0 0 24 24"><circle cx="12" cy="8" r="6"></circle><path d="m9 14-2 8 5-3 5 3-2-8"></path></svg>
+            </div>
+            <h3>Recognition</h3>
+            <p>Monthly Volunteer of the Bharat awards, feature stories and invitations to national conclaves.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 6. FAQ — reusing existing kh-faq accordion style -->
+      <section class="vlt-section vlt-section--subtle" aria-labelledby="vlt-faq-title">
+        <div class="kh-head" data-animate="fade-up">
+          <span class="kh-eyebrow kh-eyebrow--saffron"><span class="dot" aria-hidden="true"></span>Frequently Asked</span>
+          <h2 id="vlt-faq-title" class="kh-head__title">Everything you want to know <span class="accent">before joining</span></h2>
+          <p class="kh-head__lede">
+            The most common questions from aspiring volunteers — answered clearly and honestly.
+          </p>
+        </div>
+
+        <div class="kh-faq vlt-faq" data-stagger>
+          <details class="kh-faq__item" data-animate="fade-up" open>
+            <summary class="kh-faq__q">
+              <span class="kh-faq__num">01</span>
+              <span class="kh-faq__q-text">Who can become a volunteer with GauRakshak Bharat?</span>
+              <span class="kh-faq__toggle" aria-hidden="true">
+                <svg class="kh-icon" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"></path></svg>
+              </span>
+            </summary>
+            <div class="kh-faq__a">
+              <p>
+                Any citizen of Bharat aged 16 and above with genuine intent to serve Gau Mata is welcome.
+                We warmly invite students, homemakers, professionals, farmers, retired citizens and scholars —
+                every hand and every skill adds strength to the movement.
+              </p>
+            </div>
+          </details>
+
+          <details class="kh-faq__item" data-animate="fade-up">
+            <summary class="kh-faq__q">
+              <span class="kh-faq__num">02</span>
+              <span class="kh-faq__q-text">How much time do I need to commit weekly?</span>
+              <span class="kh-faq__toggle" aria-hidden="true">
+                <svg class="kh-icon" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"></path></svg>
+              </span>
+            </summary>
+            <div class="kh-faq__a">
+              <p>
+                As little as 2 hours a week is meaningful. Digital and content roles can be done remotely
+                in your own time. Field roles typically require 4–8 hours per week or a weekend day.
+                You choose the pace that fits your life.
+              </p>
+            </div>
+          </details>
+
+          <details class="kh-faq__item" data-animate="fade-up">
+            <summary class="kh-faq__q">
+              <span class="kh-faq__num">03</span>
+              <span class="kh-faq__q-text">Do I need prior experience or specific qualifications?</span>
+              <span class="kh-faq__toggle" aria-hidden="true">
+                <svg class="kh-icon" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"></path></svg>
+              </span>
+            </summary>
+            <div class="kh-faq__a">
+              <p>
+                Not at all. Sincerity and compassion are our only prerequisites. Every new volunteer goes
+                through role-based training, safety briefing and mentor pairing before starting active seva.
+              </p>
+            </div>
+          </details>
+
+          <details class="kh-faq__item" data-animate="fade-up">
+            <summary class="kh-faq__q">
+              <span class="kh-faq__num">04</span>
+              <span class="kh-faq__q-text">Is volunteering paid, or is it fully voluntary?</span>
+              <span class="kh-faq__toggle" aria-hidden="true">
+                <svg class="kh-icon" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"></path></svg>
+              </span>
+            </summary>
+            <div class="kh-faq__a">
+              <p>
+                All roles are voluntary — offered as nishkama seva. However, on-ground field volunteers
+                receive travel reimbursement for rescue missions, and full-time coordinators are eligible
+                for a modest stipend after 6 months.
+              </p>
+            </div>
+          </details>
+
+          <details class="kh-faq__item" data-animate="fade-up">
+            <summary class="kh-faq__q">
+              <span class="kh-faq__num">05</span>
+              <span class="kh-faq__q-text">I live abroad — can I still contribute?</span>
+              <span class="kh-faq__toggle" aria-hidden="true">
+                <svg class="kh-icon" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"></path></svg>
+              </span>
+            </summary>
+            <div class="kh-faq__a">
+              <p>
+                Absolutely. Our Digital Volunteer and Content Creator roles are open globally. NRIs and
+                friends of Bharat contribute to translations, design, tech, storytelling and international
+                awareness campaigns from over 15 countries.
+              </p>
+            </div>
+          </details>
+
+          <details class="kh-faq__item" data-animate="fade-up">
+            <summary class="kh-faq__q">
+              <span class="kh-faq__num">06</span>
+              <span class="kh-faq__q-text">Will I be given proper training and safety guidance?</span>
+              <span class="kh-faq__toggle" aria-hidden="true">
+                <svg class="kh-icon" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"></path></svg>
+              </span>
+            </summary>
+            <div class="kh-faq__a">
+              <p>
+                Yes. Every volunteer completes a structured orientation, role-specific training and a
+                safety &amp; ethics module. Field volunteers get additional lawful-action briefings and are
+                always paired with an experienced mentor.
+              </p>
+            </div>
+          </details>
+
+          <details class="kh-faq__item" data-animate="fade-up">
+            <summary class="kh-faq__q">
+              <span class="kh-faq__num">07</span>
+              <span class="kh-faq__q-text">Can I switch or add roles later on?</span>
+              <span class="kh-faq__toggle" aria-hidden="true">
+                <svg class="kh-icon" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"></path></svg>
+              </span>
+            </summary>
+            <div class="kh-faq__a">
+              <p>
+                Of course. Many volunteers start with digital or event roles and later transition to field
+                work — or take up leadership positions like district coordinator or trainer. Your journey
+                is yours to shape.
+              </p>
+            </div>
+          </details>
+
+          <details class="kh-faq__item" data-animate="fade-up">
+            <summary class="kh-faq__q">
+              <span class="kh-faq__num">08</span>
+              <span class="kh-faq__q-text">What happens right after I register?</span>
+              <span class="kh-faq__toggle" aria-hidden="true">
+                <svg class="kh-icon" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"></path></svg>
+              </span>
+            </summary>
+            <div class="kh-faq__a">
+              <p>
+                Within 48 hours, our district coordinator will reach out via WhatsApp or email with a short
+                orientation call, next steps and your training schedule. You'll also be added to our
+                volunteer community group for updates and support.
+              </p>
+            </div>
+          </details>
+        </div>
+      </section>
+
+      <!-- 7. FINAL CTA -->
+      <section id="vlt-cta" class="vlt-cta" aria-labelledby="vlt-cta-title">
+        <div class="vlt-cta__inner" data-animate="scale">
+          <div class="vlt-cta__ornaments" aria-hidden="true">
+            <span class="line"></span>
+            <span class="diamond"></span>
+            <span class="line"></span>
+          </div>
+          <span class="vlt-cta__eyebrow">Answer the Call</span>
+          <h2 id="vlt-cta-title" class="vlt-cta__title">
+            Bharat needs <span class="accent">your hands</span> today.
+          </h2>
+          <p class="vlt-cta__sub">
+            Every cow protected, every child taught, every village awakened — begins with one
+            volunteer saying yes. Take the first step. Gau Mata is waiting.
+          </p>
+
+          <div class="vlt-cta__actions">
+            <a href="contact.html" class="vlt-btn vlt-btn--primary vlt-btn--lg" data-testid="vlt-cta-join">
+              <svg class="vlt-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+              Become a Volunteer
+            </a>
+            <a href="community.html" class="vlt-btn vlt-btn--outline-light vlt-btn--lg" data-testid="vlt-cta-community">
+              Explore Community
+              <svg class="vlt-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"></path></svg>
+            </a>
+          </div>
+
+          <div class="vlt-cta__trust">
+            <span class="vlt-cta__trust-item">
+              <svg class="vlt-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2L3 7v6c0 5 3.5 9.5 9 11 5.5-1.5 9-6 9-11V7z"></path><path d="m9 12 2 2 4-4"></path></svg>
+              Verified NGO
+            </span>
+            <span class="vlt-cta__trust-item">
+              <svg class="vlt-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="m9 12 2 2 4-4"></path></svg>
+              Since 2019
+            </span>
+            <span class="vlt-cta__trust-item">
+              <svg class="vlt-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle></svg>
+              1000+ Volunteers
+            </span>
+          </div>
+        </div>
+      </section>
+
     </main>
 
-    <footer class="footer" role="contentinfo">
-      <div class="container footer__inner">
-        <div class="footer__bottom">
-          <p>&copy; GauRakshak Bharat — Foundation Build</p>
+    <!-- =============================================
+         GLOBAL FOOTER — reused as-is from About page
+         ============================================= -->
+    <footer class="site-footer" role="contentinfo" aria-label="Site footer">
+      <div class="site-footer__inner">
+        <div class="site-footer__grid">
+
+          <!-- Brand column -->
+          <div class="site-footer__brand">
+            <div class="site-footer__logo-row">
+              <div class="site-footer__logo-mark" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path><path d="m9 12 2 2 4-4"></path></svg>
+              </div>
+              <div class="site-footer__brand-name">
+                <span class="site-footer__brand-name-primary">GauRakshak Bharat</span>
+                <span class="site-footer__brand-name-sub">Gau Seva · Rashtra Seva</span>
+              </div>
+            </div>
+            <p class="site-footer__mission">
+              A citizen-led movement uniting Bharat to protect Gau Mata through lawful action,
+              education and dharma-driven community service.
+            </p>
+            <span class="site-footer__brand-tag">
+              <span class="dot" aria-hidden="true"></span>
+              Serving Bharat since 2019
+            </span>
+          </div>
+
+          <!-- Quick Links -->
+          <nav aria-labelledby="footer-quick-title">
+            <h3 id="footer-quick-title" class="site-footer__col-title">Quick Links</h3>
+            <ul class="site-footer__list">
+              <li><a class="site-footer__link" href="../index.html">Home</a></li>
+              <li><a class="site-footer__link" href="about.html">About Us</a></li>
+              <li><a class="site-footer__link" href="community.html">Community</a></li>
+              <li><a class="site-footer__link" href="volunteer.html">Volunteer</a></li>
+              <li><a class="site-footer__link" href="events.html">Events</a></li>
+              <li><a class="site-footer__link" href="contact.html">Contact</a></li>
+            </ul>
+          </nav>
+
+          <!-- Resources -->
+          <nav aria-labelledby="footer-res-title">
+            <h3 id="footer-res-title" class="site-footer__col-title">Resources</h3>
+            <ul class="site-footer__list">
+              <li><a class="site-footer__link" href="knowledge.html">Knowledge Hub</a></li>
+              <li><a class="site-footer__link" href="gallery.html">Gallery</a></li>
+              <li><a class="site-footer__link" href="report.html">Report a Concern</a></li>
+              <li><a class="site-footer__link" href="events.html">Upcoming Events</a></li>
+              <li><a class="site-footer__link" href="community.html">Gaushalas</a></li>
+              <li><a class="site-footer__link" href="knowledge.html">Scripture &amp; Research</a></li>
+            </ul>
+          </nav>
+
+          <!-- Contact -->
+          <div class="site-footer__contact" aria-labelledby="footer-contact-title">
+            <h3 id="footer-contact-title" class="site-footer__col-title">Contact</h3>
+
+            <a href="mailto:contact@gaurakshakbharat.org" class="site-footer__contact-item">
+              <span class="site-footer__contact-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m22 7-10 6L2 7"></path></svg>
+              </span>
+              <span class="site-footer__contact-body">
+                <span class="site-footer__contact-label">Email</span>
+                <span class="site-footer__contact-value">contact@gaurakshakbharat.org</span>
+              </span>
+            </a>
+
+            <a href="tel:+911800XXXXXXX" class="site-footer__contact-item">
+              <span class="site-footer__contact-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              </span>
+              <span class="site-footer__contact-body">
+                <span class="site-footer__contact-label">24/7 Helpline</span>
+                <span class="site-footer__contact-value">+91 1800-XXX-XXXX</span>
+              </span>
+            </a>
+
+            <div class="site-footer__contact-item">
+              <span class="site-footer__contact-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              </span>
+              <span class="site-footer__contact-body">
+                <span class="site-footer__contact-label">Head Office</span>
+                <span class="site-footer__contact-value">Vrindavan, Uttar Pradesh · Bharat</span>
+              </span>
+            </div>
+          </div>
+
+          <!-- Newsletter (spans full width) -->
+          <div class="site-footer__newsletter" role="region" aria-labelledby="footer-nl-title">
+            <div class="site-footer__newsletter-copy">
+              <h3 id="footer-nl-title" class="site-footer__newsletter-title">Stay connected to the movement</h3>
+              <p class="site-footer__newsletter-sub">
+                Get monthly stories, event invites and Gau Seva updates delivered to your inbox.
+                No spam — just dharma-driven action.
+              </p>
+            </div>
+            <form class="site-footer__newsletter-form" onsubmit="event.preventDefault();" aria-label="Newsletter subscription">
+              <input
+                type="email"
+                class="site-footer__newsletter-input"
+                placeholder="you@email.com"
+                aria-label="Your email address"
+                required>
+              <button type="submit" class="site-footer__newsletter-btn" data-testid="newsletter-submit">
+                Subscribe
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"></path></svg>
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <!-- Bottom strip -->
+        <div class="site-footer__bottom">
+          <p class="site-footer__copy">
+            © 2019–2026 <strong>GauRakshak Bharat</strong>. All rights reserved.
+            Made with dharma in Bharat.
+          </p>
+
+          <div class="site-footer__social" role="list" aria-label="Social links">
+            <a href="#" class="site-footer__social-link" aria-label="Facebook" role="listitem">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+            </a>
+            <a href="#" class="site-footer__social-link" aria-label="Twitter" role="listitem">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>
+            </a>
+            <a href="#" class="site-footer__social-link" aria-label="Instagram" role="listitem">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            </a>
+            <a href="#" class="site-footer__social-link" aria-label="YouTube" role="listitem">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+            </a>
+            <a href="#" class="site-footer__social-link" aria-label="LinkedIn" role="listitem">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+            </a>
+            <a href="#" class="site-footer__social-link" aria-label="WhatsApp" role="listitem">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8z"></path></svg>
+            </a>
+          </div>
+
+          <span class="site-footer__slogan" aria-label="Slogan">
+            गो सेवा <span class="site-footer__slogan-dot" aria-hidden="true">•</span> राष्ट्र सेवा
+          </span>
         </div>
       </div>
     </footer>

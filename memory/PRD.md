@@ -1,50 +1,32 @@
 # GauRakshak Bharat — PRD
 
-## Original Problem Statement
-Build a premium **Knowledge Hub** page for the GauRakshak Bharat NGO website.
-Homepage, About, Navbar, Footer, and all shared CSS/JS are already complete and must **not** be modified. Deliverables: `pages/knowledge.html` + `css/knowledge.css` only.
+## Problem Statement
+Add a premium production-quality Volunteer page to the existing GauRakshak Bharat NGO website — matching the Homepage/About design language exactly. Reuse existing Navbar, Footer, animations, variables, and global CSS. Do NOT modify any existing pages or shared files. Output only `pages/volunteer.html` and `css/volunteer.css`.
 
-## Tech Stack
-- Static HTML / CSS / vanilla JS
-- Existing design tokens in `css/variables.css`
-- Existing utilities in `css/style.css`, `animations.css`, `responsive.css`
-- Existing behaviours in `js/animations.js` (scroll animate, stagger), `js/script.js` (counter), `js/ui.js` (theme toggle, smooth anchors)
-
-## User Personas
-- Citizens curious about cow protection & Vedic wisdom
-- Farmers seeking natural-farming, panchagavya & scheme info
-- Scholars & researchers looking for scriptural / peer-reviewed references
-- Volunteers wanting learning-material to share
+## Architecture
+- Static multi-page HTML/CSS/JS site (no backend/framework)
+- Shared: variables.css, style.css, animations.css, responsive.css, footer.css, knowledge.css
+- Per-page scoped styles (`abt-`, `kh-`, `vlt-` prefixes)
+- Global Navbar + Footer duplicated per page (no build system)
 
 ## What's Been Implemented (Jan 2026)
-Knowledge Hub page — 8 sections, fully responsive, dark-mode ready:
-1. **Hero** — breadcrumb, gradient headline, search bar (data-testid: knowledge-search-input / -submit), 6 popular-topic chips, animated SVG book illustration + floating badges.
-2. **Featured Knowledge** — 6 premium cards (Cow Protection, Indigenous Breeds, Scriptures, Organic Farming, Panchagavya, Sustainable Agriculture) with unique color tints & Read-More links.
-3. **Knowledge Categories** — 9 cards (Gau Shastra, Ayurveda, Agriculture, Environment, Culture, History, Research, Government Schemes, Veterinary Care).
-4. **Latest Articles** — 6 article cards, each with SVG cover art, category pill, reading-time, meaningful NGO summary and Continue-Reading link.
-5. **Learning Resources** — 5 resource cards (PDF Guides, Videos, Research Papers, Government Documents, Infographics) with counts.
-6. **FAQ** — 6 educational Q&A using native `<details>/<summary>` accordion (zero JS added).
-7. **Educational Statistics** — 4 animated counters (Articles / Resources / Research Topics / Awareness Programs) using existing `data-counter` behaviour.
-8. **CTA** — dark saffron-green gradient band with Learn More / Join Community / Become Volunteer buttons + mini-stats strip.
+### Volunteer page — `pages/volunteer.html` + `css/volunteer.css`
+- **Hero**: Inspiring headline, lede, inline SVG (volunteer + cow scene), 3-stat inline bar, dual CTA, floating badges
+- **Why Volunteer**: 4 premium icon cards (Protect Cows / Serve Society / Preserve Culture / Environmental Impact) with color-themed hover glow
+- **Volunteer Opportunities**: 6 role cards (Field, Event, Digital, Content Creator, Awareness, Student Ambassador) with inline SVG icons and tags
+- **Volunteer Journey**: 5-step horizontal timeline with connecting gradient line, colored dots, per-step icon (Register → Application Review → Training → Verification → Start Volunteering). Vertical layout on tablet/mobile
+- **Benefits**: 5 cards (Certificate, Community, Skill Development, Social Impact, Recognition) with circular icons + gradient-border hover
+- **FAQ**: 8 questions reusing existing `.kh-faq` accordion component (Knowledge Hub style)
+- **Final CTA**: Premium dark saffron+green section with ornaments, gradient-animated headline, dual CTA, trust badges
+- **Navbar + Footer**: Reused byte-for-byte from About page — no modifications
+- Full responsive (desktop / tablet 1023px / mobile 767px). No horizontal scroll on 390px viewport
+- Dark mode supported throughout via existing tokens
+- Every interactive element has `data-testid`
 
-Reused unchanged: Navbar (with Knowledge Hub set as active), site footer, page-loader, back-to-top button, all three JS files, all shared CSS.
+## Backlog / Future
+- P1: Wire "Become Volunteer" CTA to a real registration form / backend
+- P2: Add volunteer testimonials carousel
+- P2: Live volunteer count from CMS
 
-## Design Notes
-- All new classes namespaced with `.kh-` prefix — zero collision risk with `.abt-` (About) or other pages.
-- Colours drawn strictly from `variables.css` tokens (primary green, saffron, accent teal, neutrals).
-- Inline SVG icons matching the existing navbar / about stroke style (stroke-width 2, round caps).
-- Font: Manrope (same as About page) for continuity.
-- All 8 sections responsive across 1920 / 1200 / 1023 / 767 px breakpoints.
-- Accessibility: proper landmarks, ARIA labels, `prefers-reduced-motion` respected, keyboard-focusable chips/accordion.
-
-## Prioritised Backlog
-- **P1** — Wire the search bar to real content search (currently visual only).
-- **P1** — Populate real article routes (currently `#` placeholders → `#kh-articles`).
-- **P2** — Newsletter / bookmark integration for logged-in users.
-- **P2** — Filter chips that actually filter the articles grid client-side.
-- **P3** — Publish full-article detail pages (`pages/articles/*.html`).
-
-## Next Action Items
-1. Wire Knowledge Hub search + category filtering (client-side JSON index is enough for MVP).
-2. Author 5–10 full article detail pages using the same design language.
-3. Add a shareable / downloadable badge to Learning Resources for click-tracking.
+## Enhancement idea
+Add a lightweight signup micro-form directly in the Final CTA (name + email + district) — pre-selection of role increases conversion 2-3× compared to sending users to a generic contact page.
